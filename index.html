@@ -85,27 +85,42 @@ $(function() {
 
 <hr>
 <script>
+    //https://developers.google.com/youtube/player_parameters#IFrame_Player_API
+    // Load the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+    tag.id = "ytjs";
+    tag.src = "https://www.youtube.com/player_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-//https://developers.google.com/youtube/player_parameters#IFrame_Player_API
-  // Load the IFrame Player API code asynchronously.
-  var tag = document.createElement('script');
-  tag.id = "ytjs";
-  tag.src = "https://www.youtube.com/player_api";
-  var firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    // Replace the 'ytplayer' element with an <iframe> and
+    // YouTube player after the API code downloads.
+      var player;
 
-  // Replace the 'ytplayer' element with an <iframe> and
-  // YouTube player after the API code downloads.
-  var player;
-  function onYouTubePlayerAPIReady() {
-    player = new YT.Player('ytplayer', {
-      height: '390',
-      width: '640',
-      videoId: 'u3mvDe3GBPI'
-    });
+    function onYouTubePlayerAPIReady() {
+      player = new YT.Player('ytplayer', {
+        height: 390,
+        width: 640,
+        videoId: 'u3mvDe3GBPI'
+      });
+    }
+/*
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState==4 && xhr.status == 200) {
+    }
+  };
+
+  xhr.open("GET", "https://www.youtube.com/player_api", true);
+  xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
+  xhr.timeout = 4000;
+  xhr.ontimeout = function () {
+    alert("Timed out!!!");
+    tag.src ="";
+    document.removeChild(document.getElementsById("ytplayer"));
   }
-
-
+  xhr.send(null);
+*/
 </script>
 
 <h1>
@@ -248,7 +263,9 @@ Donations are used solely for purchasing hardware to improve and extend QtAV.
 <hr>
 
 <div id="clustrmaps-widget"></div><script type="text/javascript">var _clustrmaps = {'url' : 'http://wang-bin.github.io/QtAV', 'user' : 1135716, 'server' : '2', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2014-03-12', 'lang' : 'zh', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www2.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script><noscript><a href="http://www2.clustrmaps.com/user/116115464"><img src="http://www2.clustrmaps.com/stats/maps-no_clusters/wang-bin.github.io-QtAV-thumb.jpg" alt="Locations of visitors to this page" /></a></noscript>
-
+<!--
+<div id="clustrmaps-widget"></div><script type="text/javascript">var _clustrmaps = {'url' : 'http://wang-bin.github.io/qtav.org', 'user' : 1136034, 'server' : '2', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2014-03-14', 'lang' : 'en', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www2.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script><noscript><a href="http://www2.clustrmaps.com/user/ba11155a2"><img src="http://www2.clustrmaps.com/stats/maps-no_clusters/wang-bin.github.io-qtav.org-thumb.jpg" alt="Locations of visitors to this page" /></a></noscript>
+-->
 
 <hr><blockquote>
 <p>Copyright © Wang Bin <a href="mailto:wbsecg1@gmail.com">wbsecg1@gmail.com</a></p>
