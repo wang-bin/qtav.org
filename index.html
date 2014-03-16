@@ -29,6 +29,35 @@
             window.location.replace(loc);
         }
     </script>
+    <style type="text/css">
+.GL
+{
+  float: left;
+  display: inline;
+  *margin-left:-0.04em; /* IE margin hack */
+  border:1px solid black;
+  margin: 1px;
+  padding: 0px;
+  position:relative;
+}
+.GL:hover
+{
+  border:1px solid #9f9;
+  /* CSS3 inset shadow: */
+  -moz-box-shadow:0 0 30px #9f9;
+  -webkit-box-shadow:0 0 30px #9f9;
+  box-shadow:0 0 30px #9f9;
+}
+.GROW:hover
+{
+  /*border:1px solid #9f9;*/
+  /* CSS3 inset shadow: */
+  -moz-box-shadow:0 0 30px #9f9;
+  -webkit-box-shadow:0 0 30px #9f9;
+  box-shadow:0 0 30px #9f9;
+
+}
+    </style>
   </head>
   <body>
       <div id="header">
@@ -172,22 +201,25 @@ Item {
 
 <div id="features">
 <h1>Features</h1>
-
+<p>
+  Supports most playback functions. Play, pause, speed, seek, volume, audio channel, audio track, dynamically renderer switching, video equalizer, custom filters for both window and video frame, network stream, video crop, multiple renderers, hardware decoding...
+  <div>
   <style type="text/css">
 #features img {
-  max-width: 280px;
-  max-height: 120px;
-
+  max-width: 200px;
+  max-height: 140px;
+  /*background-color: #ffffff;*/
 }
   </style>
-<a href="http://qt-project.org/downloads"><img src="http://qt-project.org/images/qt13a/Qt-logo.png" alt="Qt" title="Qt4, 5"></a>
-<a href="http://ffmpeg.org"><img src="http://ffmpeg.org/ffmpeg-logo.png" alt="FFmpeg" title="FFmpeg >= 0.9"></a>
-<a href="http://libav.org"><img src="http://libav.org/libav-logo-text.png" alt="Libav"></a>
-<img src="http://upload.wikimedia.org/wikipedia/en/8/8a/OpenGL_logo.jpg" alt="OpenGL" title="OpenGL/ES">
-<img src="http://upload.wikimedia.org/wikipedia/en/9/9f/OpenGL_ES_logo.png" alt="OpenGL ES">
-<img src="http://upload.wikimedia.org/wikipedia/zh/2/28/OpenAL_logo.png" alt="OpenAL">
-<a href="http://www.portaudio.com/download.html"><img src="http://www.portaudio.com/images/portaudio_logotext.png" alt="PortAudio" title="PortAudio v19"></a>
-<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Microsoft-DirectX-Logo-wordmark.svg/220px-Microsoft-DirectX-Logo-wordmark.svg.png" alt="DirectX">
+<a href="http://ffmpeg.org"><img src="http://ffmpeg.org/ffmpeg-logo.png" alt="FFmpeg" title="FFmpeg >= 0.9" style="background-color:#ffffff;" class="GROW"></a>
+<a href="http://libav.org"><img src="http://libav.org/libav-logo-text.png" alt="Libav" style="background-color:#ffffff;" class="GROW"></a>
+<img src="http://upload.wikimedia.org/wikipedia/en/8/8a/OpenGL_logo.jpg" alt="OpenGL" title="OpenGL/ES" class="GROW">
+<img src="http://upload.wikimedia.org/wikipedia/en/9/9f/OpenGL_ES_logo.png" alt="OpenGL ES" class="GROW">
+<a href="http://qt-project.org/downloads"><img src="http://qt-project.org/images/qt13a/Qt-logo.png" alt="Qt" title="Qt4, 5" class="GROW"></a>
+<img src="http://upload.wikimedia.org/wikipedia/zh/2/28/OpenAL_logo.png" alt="OpenAL" class="GROW">
+<a href="http://www.portaudio.com/download.html"><img src="http://www.portaudio.com/images/portaudio_logotext.png" alt="PortAudio" title="PortAudio v19" class="GROW"></a>
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Microsoft-DirectX-Logo-wordmark.svg/220px-Microsoft-DirectX-Logo-wordmark.svg.png" alt="DirectX" style="background-color:#ffffff;" class="GROW">
+</div>
 </div>
 
 <hr>
@@ -195,6 +227,9 @@ Item {
   <h1>Platforms</h1>
   Windows, Linux, Mac OSX, Android, iOS, MeeGo, COS
 
+  <p>
+    QtAV can run on iOS and Android. Now audio is not working for both platforms. I have no develpment environment for iOS. So iOS porting is slow.
+  </p>
   <div id="ytplayer">
   <h3>Video: QtAV based qmlvideofx with CedarV hardware decoding</h3>
   </div>
@@ -212,29 +247,44 @@ Item {
 <a name="donate-%E8%B5%84%E5%8A%A9" class="anchor" href="#donate-%E8%B5%84%E5%8A%A9"><span class="octicon octicon-link"></span></a><a href="https://sourceforge.net/p/qtav/wiki/Donate%20%E6%8D%90%E8%B5%A0">Donate 资助</a>
 </h1>
 
-<script type="text/javascript" src="http://www.ohloh.net/p/678754/widgets/project_cocomo.js"></script>
 
-<div>
+<table style="border:0px;">
+  <tr>
+    <td>
+      <script type="text/javascript" src="http://www.ohloh.net/p/678754/widgets/project_cocomo.js"></script>
+    </td>
+    <td>
   <ul>
     软件几乎由我一人利用空余学习和工作时间开发。如果您觉得不错，可以考虑资助一下。
     <li>可用于购买硬件设备使QtAV更好的支持各种硬件，如AMD显卡，pi</li>
     <li>iOS设备的开发环境</li>
   </ul>
+    </td>
+    <td>
   <ul>
 This software is almost developed by myself. If you find the program useful and would like to support my efforts, please consider donating what you think the program is worth.
 Donations are used solely for purchasing hardware to improve and extend QtAV.
     <li>AMD graphics card</li>
     <li>iOS development environment</li>
   </ul>
-</div>
+    </td>
+  </tr>
+</table>
 
 
+<table>
+<tr>
+  <td>
 <div>
-<a href="https://www.gittip.com/wang-bin"><img src="https://rawgithub.com/twolfson/gittip-badge/0.1.0/dist/gittip.png" alt="Support via Gittip"></a>
+<div>
+<a href="https://www.gittip.com/wang-bin"><img src="https://rawgithub.com/twolfson/gittip-badge/0.1.0/dist/gittip.png" alt="Support via Gittip" class="GROW"></a>
 </div>
 <div>
-<p><a href="https://me.alipay.com/lucaswang"><img src="https://img.alipay.com/sys/personalprod/style/mc/btn-index.png" alt="Alipay"></a></p>
+<p><a href="https://me.alipay.com/lucaswang"><img src="https://img.alipay.com/sys/personalprod/style/mc/btn-index.png" alt="Alipay" class="GROW"></a></p>
 </div>
+</div>
+  </td>
+  <td>
 <div>
   <div>
   <img width="50" height="35" src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg" alt="PayPal"></img><img src="http://upload.wikimedia.org/wikipedia/foundation/7/78/Credit_cards.png" alt="Visa, MasterCard, Discover, American Express, eCheck"></img>
@@ -244,8 +294,8 @@ Donations are used solely for purchasing hardware to improve and extend QtAV.
   <input type="hidden" name="business" value="06122952wb@163.com">
   <input type="hidden" name="no_shipping" value="1">
   <input type="hidden" name="item_name" value="Donation for QtAV">
-  <input type="text" name="amount" value="8.00" onkeyup="if(!/^\d*.?\d{0,2}$/.test(this.value))this.value=this.value.replace(/[^\d.]/g,'').replace(/(^\d*.?\d{0,2}).*/g,'$1')">
-  <select name="currency_code">
+  <input type="text" name="amount" value="8.00" onkeyup="if(!/^\d*.?\d{0,2}$/.test(this.value))this.value=this.value.replace(/[^\d.]/g,'').replace(/(^\d*.?\d{0,2}).*/g,'$1')" class="GROW">
+  <select name="currency_code" class="GROW">
       <option value="USD" selected="selected">$ (USD)</option>
       <option value="EUR">€ (EUR)</option>
       <option value="HKD">$ (HKD)</option>
@@ -254,11 +304,16 @@ Donations are used solely for purchasing hardware to improve and extend QtAV.
       <option value="AUD">$ (AUD)</option>
       <option value="JPY">¥ (JPY)</option>
   </select>
-  <input type="image" src="http://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" name="submit" alt="Make payments with PayPal - it is fast, free and secure!">
-  <input type="image" src="http://www.paypal.com/zh_CN/i/btn/btn_donate_LG.gif" name="submit" alt="Make payments with PayPal - it is fast, free and secure!">
+  <input type="image" src="http://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" name="submit" alt="Make payments with PayPal - it is fast, free and secure!" class="GROW">
+  <input type="image" src="http://www.paypal.com/zh_CN/i/btn/btn_donate_LG.gif" name="submit" alt="Make payments with PayPal - it is fast, free and secure!" class="GROW">
   </form>
 </div>
+  </td>
 </div>
+</tr>
+
+</table>
+
 
 <hr>
 
