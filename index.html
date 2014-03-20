@@ -55,6 +55,8 @@
       <div id="header">
         <nav>
           <li class="fork"><a href="https://github.com/wang-bin/QtAV">Fork On GitHub</a></li>
+          <li class="fork"><a href="https://github.com/wang-bin/QtAV/wiki/_pages">Wiki</a></li>
+          <li class="fork"><a href="https://github.com/wang-bin/QtAV/issues">Issues</a></li>
   <!--
           <li class="downloads"><a href="https://github.com/wang-bin/QtAV/zipball/master">ZIP</a></li>
           <li class="downloads"><a href="https://github.com/wang-bin/QtAV/tarball/master">TAR</a></li>
@@ -91,7 +93,7 @@
   <li><img src="screenshots/QtAV-player-on-SailfishOS.jpg" alt="QtAV player on Sailfish OS" title="QtAV player on Sailfish OS"></li>
   <li><img src="screenshots/QtAV-QMLPlayer-on-SailfishOS-0.jpg" alt="QtAV based QMLPlayer on Sailfish OS" title="QtAV based QMLPlayer on Sailfish OS"></li>
   <li><img src="screenshots/QtAV-QMLPlayer-on-SailfishOS.jpg" alt="QtAV based QMLPlayer on Sailfish OS. playing" title="QtAV based QMLPlayer on Sailfish OS. playing"></li>
-  <li><img src="screenshots/QtAV+qmlvideofx_on_Olinuxino+cedar+hardware+decoding.jpg" alt="QtAV based qmlvideofx on Olinuxino + CedarV" title="QtAV based qmlvideofx on Olinuxino + CedarV"></li>
+  <li><img src="screenshots/QtAV+qmlvideofx_on_Olinuxino+cedar+hardware+decoding.jpg" alt="QtAV based qmlvideofx on Olinuxino + CedarV hardwarem decoding" title="QtAV based qmlvideofx on Olinuxino + CedarV hardwarem decoding"></li>
   <li><img src="screenshots/ip_camera.jpg" alt="IP camera + QtAV" title="IP camera + QtAV on Fedora 18"></li>
   <li><img src="screenshots/camera.jpg" alt="camera + QtAV" title="camera + QtAV"></li>
 </ul>
@@ -195,11 +197,14 @@ Item {
 
   </td>
 </tr>
-</table> 
+</table>
+
+The required libraries for building QtAV I use can be found here: <a href="https://sourceforge.net/projects/qtav/files/depends/">FFmpeg and PortAudio</a>, <a href="https://sourceforge.net/projects/buildqt/files/release">Qt</a>
+
 </div>
 
 
-<div id="features">
+<div id="features" style="margin-top:40px;">
 <h1>Features</h1>
 <p>
   Supports most playback functions. Play, pause, speed, seek, volume, audio channel, audio track, dynamically renderer switching, video equalizer, custom filters for both window and video frame, network stream, video crop, multiple renderers, hardware decoding...
@@ -225,7 +230,7 @@ Item {
 
 <div id="platforms" style="margin-top:40px;">
   <h1>Platforms</h1>
-  Windows, Linux, Mac OSX, Android, iOS, MeeGo, COS
+  Windows, Linux, Mac OSX, Android, iOS, MeeGo, Sailfish OS, COS
 
   <p>
     QtAV can run on iOS and Android. Now audio is not working for both platforms. I have no develpment environment for iOS. So iOS porting is slow.
