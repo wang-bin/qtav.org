@@ -208,6 +208,10 @@ The required libraries for building QtAV I use can be found here: <a href="https
 <h1>Features</h1>
 <p>
   Supports most playback functions. Play, pause, speed, seek, volume, audio channel, audio track, dynamically renderer switching, video equalizer, custom filters for both window and video frame, network stream, video crop, multiple renderers, hardware decoding...
+</p>
+<p>
+  With the help of FFmpeg, QtAV is able to play most media formats, without installing other codecs.
+</p>
   <div>
   <style type="text/css">
 #features img {
@@ -234,7 +238,8 @@ The required libraries for building QtAV I use can be found here: <a href="https
 
 <!-- TODO: generate SVG from data on the fly-->
   <div>
-    <p>NVIDIA GT 530M, <a href="http://www.bigbuckbunny.org/index.php/download">Big Buck Bunny 1080P H.264</a></p>
+    <p>Figure: QtAV and VLC CPU usage. Lower is better. Windows 7 + NVIDIA GT 530M + <a href="http://www.bigbuckbunny.org/index.php/download">Big Buck Bunny 1080P H.264</a>
+    </p>
     <img src="images/VLC-QtAV.jpg">
   </div>
 
@@ -257,17 +262,25 @@ The required libraries for building QtAV I use can be found here: <a href="https
   </div>
 </div>
 
-
-<div id="todo" style="margin-top:40px;">
-<h1><a href="https://github.com/wang-bin/QtAV/wiki/TODO">TODO</a></h>
+<div id="why" style="margin-top:40px;">
+<h1>Why Not QtMultimedia? Why QtAV?</h1>
+<ul>
+  <li>QtMultimedia in Qt4 is poor. QtAV works fine for both Qt4 and Qt5.
+  <li>QtMultimedia's implemention is platform depended. It use dshow on windows, gstream on linux etc. May be not an easy work to support a new platform. While QtAV use FFmpeg, works for most platforms. No additional work required.
+  </li>
+  <li>Additional codecs may be required to make QtMultimedia work for some media formats.</li>
+  <li>QtAV has more powerful playback features than QtMultimedia. For example, multiple renderers for 1 player, region of interest(video crop), custom filters</li>
+</ul>
 </div>
 
+
+<div id="todo" style="margin-top:40px;">
+<h1><a href="https://github.com/wang-bin/QtAV/wiki/TODO">TODO</a></h1>
+</div>
+
+
 <div id="donate" style="margin-top:40px;">
-<h1>
-Donate 资助
-</h1>
-
-
+<h1> Donate 资助 </h1>
 <table style="border:none;">
   <tr>
     <td style="vertical-align:top;">
@@ -276,7 +289,7 @@ Donate 资助
     <td>
     软件几乎由我一人利用空余学习和工作时间开发。如果您觉得不错，可以考虑资助一下。
   <ul>
-    <li>可用于购买硬件设备使QtAV更好的支持各种硬件，如AMD显卡，pi</li>
+    <li>购买硬件使QtAV更好的支持各种硬件，如AMD显卡，pi</li>
     <li>iOS设备的开发环境</li>
     <li>捐助给项目参与者</li>
   </ul>
@@ -285,15 +298,13 @@ Donate 资助
       This software is almost developed by myself. If you find the program useful and would like to support my efforts, please consider donating what you think the program is worth.
 Donations are used solely for purchasing hardware to improve and extend QtAV.
   <ul>
-    <li>AMD graphics card</li>
+    <li>AMD graphics card, pi</li>
     <li>iOS development environment</li>
     <li>Donate to contributors</li>
   </ul>
     </td>
   </tr>
 </table>
-
-
 <table>
 <tr>
   <td>
