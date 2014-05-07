@@ -217,12 +217,17 @@ The required libraries for building QtAV I use can be found here: <a href="https
 <p>
   Decoding with CUDA is supported since 1.3.3. Tested on Windows and Linux. It's the first player/library support CUDA on Linux(tell me if i'm wrong)
 </p>
+<h4>Hi10P support by CUDA</h4>
+<p>
+  Now some NVIDIA cards support Hi10P. I tested GT 540M and GT 750M. So you can enable CUDA decoder in QtAV and get better performance.
+</p>
 <h4>OpenGL and ES2 support for Hi10P</h4>
 <p>
   Rendering 16-bit YUV is supported using OpenGL and OpenGL ES2. Supported formats are 9, 10, 12, 14, 16 bit planar YUV, both little endian and big endian.
   AFAIK, those famous player such as VLC, XBMC and mplayer can not renderering it using OpenGL ES2. They only support desktop OpenGL.
   Obviously QtAV has better performance. I tested a 10bit h264 video (download here: http://ps-auxw.de/10bit-h264-sample) on HTC Butterfly S. QtAV cpu usage is about 10% less than VLC!
 </p>
+
   <div>
   <style type="text/css">
 #features img {
