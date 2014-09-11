@@ -30,7 +30,7 @@
         }
     </script>
 <!-- https://developers.google.com/+/web/share/ -->
-<script type="text/javascript" src="https://apis.google.com/js/platform.js">{lang: 'zh-HK'}</script>
+  <script id="gapi" type="text/javascript" src="https://apis.google.com/js/platform.js">{lang: 'zh-HK'}</script>
 
     <style type="text/css">
 .GL
@@ -225,7 +225,7 @@ The required libraries for building QtAV I use can be found here: <a href="https
 </p>
 <h4>Hardware decoding</h4>
 <p>
-  Supports DXVA, VAAPI, CUDA, CedarX. VAAPI supports direct rendering.
+  Supports DXVA, VAAPI, CUDA, VDA, CedarX. Direct rendering is also supported for VAAPI and it gives you better performance. Direct rendering will be support for DXVA, CUDA and VDA in the future.
 </p>
 <h4>CUDA for Windows and Linux</h4>
 <p>
