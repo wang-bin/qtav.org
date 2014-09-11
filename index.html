@@ -161,6 +161,7 @@ $(function() {
 
 <div style="margin-top:60px;">
 <h1><a name="news" class="anchor" href="#news"><span class="octicon octicon-link"></span></a>News</h1>
+<h2>2014-09-10: <a href="blog/1.4.0.html">1.4.0 Released</a></h2>
 <h2>2014-06-09: Audio works on Android. <a href="http://sourceforge.net/projects/qtav/files/release/1.3.4/QtAV1.3.4-QMLPlayer-android-arm-20140610.apk/download">Download QMLPlayer for Android</a></h2>
 <h2>2014-05-30: <a href="blog/1.3.4.html">1.3.4 Released</a></h2>
 
@@ -209,7 +210,7 @@ Item {
 </tr>
 </table>
 
-The required libraries for building QtAV I use can be found here: <a href="https://sourceforge.net/projects/qtav/files/depends/">FFmpeg and PortAudio</a>, <a href="https://sourceforge.net/projects/buildqt/files/release">Qt</a>
+The required libraries for building QtAV I use can be found here: <a href="https://sourceforge.net/projects/qtav/files/depends/">FFmpeg and OpenAL</a>, <a href="https://sourceforge.net/projects/buildqt/files/release">Qt</a>
 
 </div>
 
@@ -217,14 +218,14 @@ The required libraries for building QtAV I use can be found here: <a href="https
 <div id="features" style="margin-top:40px;">
 <h1>Features</h1>
 <p>
-  Supports most playback functions. Play, pause, speed, seek, volume, audio channel, audio track, dynamically renderer switching, video equalizer, custom filters for both window and video frame, network stream, video crop, multiple renderers, hardware decoding...
+  Supports most playback functions. Play, pause, speed, seek, subtitle, volume, audio channel, audio track, dynamically renderer switching, video equalizer, custom filters for both window and video frame, network stream, video crop, multiple renderers, hardware decoding...
 </p>
 <p>
   With the help of FFmpeg, QtAV is able to play most media formats, without installing other codecs.
 </p>
 <h4>Hardware decoding</h4>
 <p>
-  Supports DXVA, VAAPI, CUDA, CedarX
+  Supports DXVA, VAAPI, CUDA, CedarX. VAAPI supports direct rendering.
 </p>
 <h4>CUDA for Windows and Linux</h4>
 <p>
@@ -264,15 +265,16 @@ The required libraries for building QtAV I use can be found here: <a href="https
 
 <div id="performance" style="margin-top:40px;">
   <h1>Performance</h1>
-  QtAV supports hardware decoding and OpenGL renderering. The performance is quite good. I compared QtAV with VLC on 2 windows computers, about FFmpeg+OpenGL, DXVA+OpenGL. The result is QtAV eats less cpu than VLC.
+  QtAV supports hardware decoding and OpenGL renderering. The performance is quite good. You can compare QtAV with VLC, XBMC and MPV.
 
 <!-- TODO: generate SVG from data on the fly-->
+<!--
   <div>
     <p>Figure: QtAV and VLC CPU usage. Lower is better. Windows 7 + NVIDIA GT 530M + <a href="http://www.bigbuckbunny.org/index.php/download">Big Buck Bunny 1080P H.264</a>
     </p>
     <img src="images/VLC-QtAV.jpg">
   </div>
-
+-->
 </div>
 
 <div id="platforms" style="margin-top:40px;">
