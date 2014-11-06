@@ -44,12 +44,16 @@
 <li>Subtitle: libass renderering support. Dynamically change FFmpeg parser and libass</li>
 <li>Log level control support without changing any Qt logging functions (qDebug, qWarning etc.)</li>
 <li>Video orientation support in renderers</li>
-<li>Bug fix: video frame with alpha value. video stream start time &gt;0. OpenAL can not close correctly...</li>
+<li>Bug fix: video frame with alpha value. video stream start time &gt;0. OpenAL can not close correctly.</li>
 <li>QML only: video preview.</li>
 <li>players: config UI in QMLPlayer. Video preview on progress bar.</li>
 </ul><h3 id="qml-api"><a name="qml-api" href="#qml-api"></a>QML API</h3><p>QML API is plan to compatible with QtMultimedia module. Here is a list of unsupported API</p><ul>
 <li>MediaPlayer: autoLoad, avaibility, bufferProgress, status.</li>
-</ul><h3 id="subtitle"><a name="subtitle" href="#subtitle"></a>Subtitle</h3><p>libass is supported now. You can use <code>subtitleFilter-&gt;setEngines(QStringList() &lt;&lt; "LibASS" &lt;&lt; "FFmpeg")</code> to enable libass renderering if possible. In QML</p><pre><code data-origin="&lt;pre&gt;&lt;code&gt;Video {
+</ul><h3 id="subtitle"><a name="subtitle" href="#subtitle"></a>Subtitle</h3>
+<p>libass is supported now. You can use
+<code>subtitleFilter-&gt;setEngines(QStringList() &lt;&lt; "LibASS" &lt;&lt; "FFmpeg")</code>
+ to enable libass renderering if possible. In QML</p>
+ <pre><code data-origin="&lt;pre&gt;&lt;code&gt;Video {
     ...
     subtitle.engines: [&quot;LibASS&quot;, &quot;FFmpeg&quot;]
 }
@@ -58,20 +62,36 @@
     subtitle.engines: ["LibASS", "FFmpeg"]
 }
 </code></pre>
-<p>It will take effect soon even if video is playing.</p>
+<p>It will take effect soon even if video is playing.
 <img src="images/QMLPlayer1.4.1-subtitle-ass-en_US.jpg" alt="" title="libass">
-<img src="images/QMLPlayer1.4.1-subtitle-ffmpeg-en_US.jpg" alt="" title="ffmpeg">
-</p>
+<img src="images/QMLPlayer1.4.1-subtitle-ffmpeg-en_US.jpg" alt="" title="ffmpeg"></p>
+
+<h3 id="debian"><a name="debian" href="#debian"></a>Debian</h3><p>Requres Qt5. So ubuntu must be &gt;=14.04.</p><pre><code data-origin="&lt;pre&gt;&lt;code&gt;git submodule update --init
+debuild -us -uc -j4
+sudo dpkg -i ../*qtav*.deb
+&lt;/code&gt;&lt;/pre&gt;">git submodule update --init
+debuild -us -uc -j4
+sudo dpkg -i ../*qtav*.deb
+</code></pre><p>Then you can run QtAV players and develop QtAV based applications.</p><h3 id="logging"><a name="logging" href="#logging"></a>Logging</h3><p>Log message in QtAV is annoying sometimes. Now only debug build will enable logging. You can also enable/disable the logging using</p><pre><code data-origin="&lt;pre&gt;&lt;code&gt;QtAV::setLogLevel(leve);
+&lt;/code&gt;&lt;/pre&gt;">QtAV::setLogLevel(leve);
+</code></pre><p>You can also use environment var <code>QTAV_LOG_LEVEL</code>, value can be <code>all, debug, warning, critical, fatal</code>. If environment var is set, other <code>setLogLevel()</code> will be ignored.</p>
+
 <h3 id="screenshort"><a name="screenshort" href="#screenshort"></a>Screenshort</h3>
 <p>
   <img src="images/QMLPlayer1.4.1-preview-zh_CN.jpg" alt="" title="progress bar preview">
-  <img src="images/QMLPlayer1.4.1-preview-zh_CN.jpg" alt="" title="progress bar preview disabled">
+  <img src="images/QMLPlayer1.4.1-preview-disabled-zh_CN.jpg" alt="" title="progress bar preview disabled">
   <img src="images/QMLPlayer1.4.1-audio-zh_CN.jpg" alt="" title="audio config page">
   <img src="images/QMLPlayer1.4.1-decoders-zh_CN.jpg" alt="" title="decoder config page">
   <img src="images/QMLPlayer1.4.1-mediainfo-zh_CN.jpg" alt="" title="Media info page">
 </p>
 
-<footer style="position:fixed; font-size:20px; text-align:right; bottom:20px; margin-left:-25%; height:30px; width:100%;"><a href="../index.html#donate">Donate</a></footer>
+<footer style="position:fixed; font-size:20px; text-align:right; bottom:20px; margin-left:-25%; height:30px; width:100%;">
+<a href="http://sourceforge.net/projects/qtav/files/release/1.4.1/QtAV1.4.1-msvc2013xp-x86.exe/download"><img src="../images/DL_Windows.png"></a>
+<a href="http://sourceforge.net/projects/qtav/files/release/1.4.1/QtAV1.4.1-linux64-installer.run/download"><img src="../images/DL_Linux.png"></a>
+<a href="http://sourceforge.net/projects/qtav/files/release/1.4.1/QtAV1.4.1-player-OSX.dmg/download"><img src="../images/DL_OSX.png"></a>
+<a href="http://sourceforge.net/projects/qtav/files/release/1.4.1/QtAV1.4.1-QMLPlayer-android-armv7a.apk/download"><img src="../images/DL_Android.png"></a>
+<a href="../index.html#donate" style="color:#ffa500;">Donate</a>
+</footer>
 </section>
 </div> <!--wrapper>
 </body>
