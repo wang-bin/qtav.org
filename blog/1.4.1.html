@@ -47,9 +47,17 @@
 <li>Bug fix: video frame with alpha value. video stream start time &gt;0. OpenAL can not close correctly.</li>
 <li>QML only: video preview.</li>
 <li>players: config UI in QMLPlayer. Video preview on progress bar.</li>
-</ul><h3 id="qml-api"><a name="qml-api" href="#qml-api"></a>QML API</h3><p>QML API is plan to compatible with QtMultimedia module. Here is a list of unsupported API</p><ul>
+<h5 id="warning:-qmlplayer-crashesfrequently"><a name="warning:-qmlplayer-crashesfrequently" href="#warning:-qmlplayer-crashesfrequently"></a>
+Warning: QMLPlayer crashes frequently
+</h5>
+</ul><h3 id="qml-api"><a name="qml-api" href="#qml-api"></a>
+QML API</h3>
+<p>QML API is plan to compatible with QtMultimedia module. Here is a list of unsupported API</p>
+<ul>
 <li>MediaPlayer: autoLoad, avaibility, bufferProgress, status.</li>
-</ul><h3 id="subtitle"><a name="subtitle" href="#subtitle"></a>Subtitle</h3>
+</ul>
+<h3 id="subtitle"><a name="subtitle" href="#subtitle"></a>
+Subtitle</h3>
 <p>libass is supported now. You can use
 <code>subtitleFilter-&gt;setEngines(QStringList() &lt;&lt; "LibASS" &lt;&lt; "FFmpeg")</code>
  to enable libass renderering if possible. In QML</p>
