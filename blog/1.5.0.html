@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>QtAV 1.4.2</title>
+  <title>QtAV 1.5.0</title>
   <link rel="stylesheet" href="../stylesheets/styles.css">
   <link rel="stylesheet" href="../stylesheets/pygment_trac.css">
   <script src="../javascripts/jquery-1.9.1.min.js"></script>
@@ -37,68 +37,108 @@
 <div class="wrapper">
 <section>
 
-  <h2 id="1.4.2-release-note"><a name="1.4.2-release-note" href="#1.4.2-release-note"></a>1.4.2 Release Note</h2><h3 id="changelog"><a name="changelog" href="#changelog"></a>Changelog</h3><ul>
-<li>Async load</li>
-<li>Faster seek and preview. Thanks wm4(mpv developer)</li>
-<li>Better a/v sync solution. Now can play high fps video better than ANY other players.</li>
-<li>DXVA: enable HEVC decoder if libavcodec runtime supports. LAVFilters ffmpeg supports it.</li>
-<li>Cedarv improvements, nv12 output support, neon code from libvdpau-sunxi</li>
-<li>Multiple OpenAL instances support</li>
-<li>AVInput class to extend media sources. Support play multimedia files from qrc resouces.</li>
-<li>Display the first frame after seek</li>
-<li>Better clock error correction</li>
-<li>Fix play frame by frame issues</li>
-<li>Fix QML video shake</li>
-<li>More details for error signals</li>
-<li>Apply user options in the next playback</li>
-<li>Dynamic load libass (submodule 'capi' is required, <a href="https://github.com/wang-bin/capi">https://github.com/wang-bin/capi</a>)</li>
-<li>VA-API: fix blurred bottom line issue. works on libav &gt;= 9 now.</li>
-<li>Progress is start at 0 by default even if 1st pts is not 0.</li>
-<li>Fix capture issues: capture current displayed frame, easier api</li>
-<li>RGB48 support. OpenGL only supports RGB48LE.</li>
-<li>Link to static ffmpeg support</li>
-<li>Fix open error if input url/path contains special charactors</li>
+  <h2 id="1.5.0-release-note"><a name="1.5.0-release-note" href="#1.5.0-release-note"></a>1.5.0 Release Note</h2>
+<h3 id="changelog"><a name="changelog" href="#changelog"></a>Changelog</h3><ul>
+<li>Add QtAVWidgets module contains widget based renderers, video preview widget</li>
+<li>QtAV module only depends on QtCore and QtGui</li>
+<li>Improve audio output API</li>
+<li>Simplify deployment on OSX. Deploy sdk from release packages without build.</li>
+<li>Improve seekable detection</li>
+<li>Fix noise audio if volume increased</li>
+<li>Fix noise and wrong playback speed for wmv videos</li>
+<li>Preview is more accurate</li>
+<li>Do not copy AVPacket but use reference count.</li>
+<li>Faster audio track switch</li>
+<li>Reopen audio output only if audio format changed</li>
+<li>VideoFrame: new API for converting to another format or QImage</li>
+<li>OpenGL VAO, VBO support.</li>
+<li>QML<ul>
+<li>Fix some crashes in QQuickItemRenderer</li>
+<li>Add FBO item renderer and use the same code path as other opengl renderers</li>
+<li>timeout property</li>
 </ul>
-<h3 id="high-frame-rate-video">
-  <a name="high-frame-rate-video" href="#high-frame-rate-video"></a>
-  High Frame Rate Video
-</h3>
-<p>In this version, audio and video synchronization is optimized. Now it's able to play high resolution and high frame rate videos even use software decoding.
-  I tested a 4k 120fps h264 video on windows, ubuntu and OSX, no player can play it with software decoders. Video will be too slow a few seconds later.
-  On windows, players such as PotPlayer, MPC with DXVA or CUDA decoder also can not play it. Only mpv with VA-API or VDA decoder can play it correctly.
-</p>
-<p>
-  With QtAV, you can play those videos better than ever before. The result is better on linux than windows in my tests.
-  A Haswell i7-4700MQ cpu can play a 4k+120fps video at about 50fps without lossing user experience.
-  It seems impossible for other players. If VA-API is used, 4k+120fps is not a problem. Other HW decoders in QtAV are not efficient enough now.
-  They will be improved in the future.
-</p>
-<p>
-  Test video: <a href="http://pan.baidu.com/s/1sjykTqt">4k 120fps h264 10bit</a>,
-  <a href="http://pan.baidu.com/s/1sj6s40l">4k 120fps h264</a>
-</p>
+</li>
+<li>player and QMLPlayer example<ul>
+<li>player: real time preview on progress bar</li>
+<li>Fast seek and display if seek shortcut is pressed and hold</li>
+</ul>
+</li>
+</ul><h3 id="qtavwidgets-module"><a name="qtavwidgets-module" href="#qtavwidgets-module"></a>QtAVWidgets Module</h3>
+  <p>All classes depedns on QtWidgets module are moved to QtAVWidgets module. Thus your QtWidgets is not required for your QtQuick app.
+    For C++ developers, code changes a little
+  </p>
+<ul>
+<li>In <code>pro</code> file, add a line <code>QT += avwidgets</code></li>
+<li>In source files use QtAV or it's renderers, add</li>
+</ul>
+<pre><code data-origin="&lt;pre&gt;&lt;code&gt;#include &amp;lt;QtAV&amp;gt;
+#include &amp;lt;QtAVWidgets&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;">#include &lt;QtAV&gt;
+#include &lt;QtAVWidgets&gt;
+</code></pre>
+<ul>
+<li>In main.cpp, call <code>QtAV::Widgets::registerRenderers();</code></li>
+</ul>
+<h3 id="real-time-preview"><a name="real-time-preview" href="#real-time-preview"></a>Real Time Preview</h3>
+<p>It was already used in QML module (and QMLPlayer) in previous release. Now it is also included in QtAVWidgets module and player example.</p>
+<pre><code data-origin="&lt;pre&gt;&lt;code&gt;VideoPreviewWidget *preview = new VideoPreviewWidget();
+preview-&amp;gt;resize(160, 90);
+preview-&amp;gt;setFile(&quot;path_of_video&quot;);
+...
+// slot of slider value changed
+preview-&amp;gt;setTimestamp(value);
+preview-&amp;gt;preview();
+&lt;/code&gt;&lt;/pre&gt;">
+VideoPreviewWidget *preview = new VideoPreviewWidget();
+preview-&gt;resize(160, 90);
+preview-&gt;setFile("path_of_video");
+...
+// slot of slider value changed
+preview-&gt;setTimestamp(value);
+preview-&gt;preview();
+</code></pre>
+<p>screenshots:</p>
+<p><img src="images/player-preview-windows.jpg" alt="" title="real time preview in player"></p>
+<h3 id="qml-video"><a name="qml-video" href="#qml-video"></a>QML Video</h3>
+<p>QML <code>VideoOutput</code> item crashes a lot since OpenGL rendering was enabled in previous releases. Now most crashes are fixed, but 1 crash still exists(VideoFrame assignment).
+  As a workaround, I add a new QML item <code>VideoOutput2</code>, which is <code>QuickFBORenderer</code> in C++. New renderer use the same OpenGL code path as renderers in QtAV and QtAVWidgets.
+  It's easier to maintain. It works fine. One limitation I know is that it's parent items can not set <code>layer.enabled: true</code>. Otherwise <code>VideoOutput2</code> will not update correctly.
+  I don't know what is the solution. Tell me if you know.</p>
+  <p>To use <code>VideoOutput2</code> and <code>Video</code> item you have to <code>import QtAV 1.5</code>.</p>
 
-<h3 id="dxva-+-hevc"><a name="dxva-+-hevc" href="#dxva-+-hevc"></a>DXVA + HEVC</h3>
-<p>
-  There is no binary package now because it crashes for some video files. The official ffmpeg does not support hevc dxva2 yet.
-  You can try Nevcairiel's (LAVFilters author) ffmpeg repo <code>git://git.1f0.de/ffmpeg.git</code>, and replace with his avcodec.
-</p>
+<h3 id="deploy-qtav-sdk-on-osx"><a name="deploy-qtav-sdk-on-osx" href="#deploy-qtav-sdk-on-osx"></a>Deploy QtAV SDK on OSX</h3>
+<p>Download the latest OSX player dmg, install player.app to <code>/Applications</code>. Run</p>
+<pre>
+  <code data-origin="&lt;pre&gt;&lt;code&gt;/Applications/player.app/sdk_osx.sh ~/Qt5.4.0/5.4/clang_64/lib
+&lt;/code&gt;&lt;/pre&gt;">/Applications/player.app/sdk_osx.sh ~/Qt5.4.0/5.4/clang_64/lib
+  </code>
+</pre>
+<p>Assume your Qt5.4 is installed in ~/Qt5.4.0.</p>
+<p>Now you can test your first QtAV app. Change QtAV/examples/simpleplayer/simpleplayer.pro content to</p>
+<pre><code data-origin="&lt;pre&gt;&lt;code&gt;TEMPLATE = app
+CONFIG -= app_bundle
+QT += avwidgets av
+HEADERS = playerwindow.h
+SOURCES = playerwindow.cpp main.cpp
+&lt;/code&gt;&lt;/pre&gt;">
+TEMPLATE = app
+CONFIG -= app_bundle
+QT += avwidgets av
+HEADERS = playerwindow.h
+SOURCES = playerwindow.cpp main.cpp
+</code></pre>
+<p>Open simpleplayer.pro in QtCreator, build and run.</p>
 
-<h5 id="about-released-binary-packages">
-<a name="about-released-binary-packages" href="#about-released-binary-packages"></a>
-About Released Binary Packages
-</h5>
-<p>
-<a href="https://sourceforge.net/projects/qtav/files/release/1.4.2">https://sourceforge.net/projects/qtav/files/release/1.4.2</a>
-</p>
+<h5 id="about-released-binary-packages"><a name="about-released-binary-packages" href="#about-released-binary-packages"></a>About Released Binary Packages</h5>
+<p><a href="https://sourceforge.net/projects/qtav/files/release/1.5.0">https://sourceforge.net/projects/qtav/files/release/1.5.0</a></p>
 
 <footer style="position:fixed; font-size:20px; text-align:right; bottom:20px; margin-left:-25%; height:30px; width:100%;">
 <a style="color:#a5ff00;">QQ群: 121572305</a>
 <a style="color:#a5ff00;">IRC: #qtav</a>
-<a href="http://sourceforge.net/projects/qtav/files/release/1.4.2/QtAV1.4.2-MinGW32.exe/download"><img src="../images/DL_Windows.png"></a>
-<a href="http://sourceforge.net/projects/qtav/files/release/1.4.2/QtAV1.4.2-Linux64.run/download"><img src="../images/DL_Linux.png"></a>
-<a href="http://sourceforge.net/projects/qtav/files/release/1.4.2/QtAV1.4.2-Player.dmg/download"><img src="../images/DL_OSX.png"></a>
-<a href="http://sourceforge.net/projects/qtav/files/release/1.4.2/QtAV1.4.2-QMLPlayer-android-armv7a.apk/download"><img src="../images/DL_Android.png"></a>
+<a href="http://sourceforge.net/projects/qtav/files/release/1.5.0/QtAV1.5.0-MinGW32.exe/download"><img src="../images/DL_Windows.png"></a>
+<a href="http://sourceforge.net/projects/qtav/files/release/1.5.0/QtAV1.5.0-Linux64.run/download"><img src="../images/DL_Linux.png"></a>
+<a href="http://sourceforge.net/projects/qtav/files/release/1.5.0/QtAV1.5.0-player-OSX.dmg/download"><img src="../images/DL_OSX.png"></a>
+<a href="http://sourceforge.net/projects/qtav/files/release/1.5.0/QtAV1.5.0-QMLPlayer-android-armv7a.apk/download"><img src="../images/DL_Android.png"></a>
 <a href="../index.html#donate" style="color:#ffa500;">Donate</a>
 </footer>
 </section>
