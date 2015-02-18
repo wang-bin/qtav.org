@@ -52,8 +52,39 @@
   box-shadow:0 0 30px #9f9;
 
 }
+.feature {
+  border: 1px solid #5d910b;
+}
+.feature div:not(.detail) {
+  font-size: 18px;
+  color: #E66000;
+}
+.detail {
+  color: #FF9500;
+  left: 50%;
+  width: 50%;
+  font-size: 20px;
+  padding: 10px;
+  display:none;
+  position:absolute;
+  background-color: #00539F;
+}
+/*http://stackoverflow.com/questions/5005244/vertical-align-center-image-in-fixed-size-div*/
+div.img-container {
+     width: 100%;
+     height: 360px;
+     margin-left: auto;
+     margin-right: auto;
+     overflow: hidden;
+ }
+img.cropped {
+    margin: auto;
+    min-width: 100%;
+    min-height: 100%;
+}
     </style>
   </head>
+
   <body>
       <div id="header">
         <nav>
@@ -74,8 +105,8 @@
       <section>
         <div id="title">
           <h1>QtAV</h1>
-          <p>A multimedia playback framework based on Qt and FFmpeg. It helps you to write a player easily</p>
-          <p>基于Qt和FFmpeg的音视频播放框架</p>
+          <p>A multimedia playback framework based on Qt + FFmpeg. Cross platform. High performace. Easy to use and develop</p>
+          <p>基于Qt和FFmpeg的跨平台高性能音视频播放框架</p>
           <p style="font-size:14px;">Library license: LGPL v2.1+. Examples license: GPL v3</p>
           <span class="credits left">Project maintained by <a href="https://github.com/wang-bin">wang-bin</a></span>
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
@@ -174,7 +205,74 @@ $(function() {
 
 
 <div id="features" style="margin-top:40px;">
-  <div id="logos">
+<h1>Features</h1>
+<div class="feature">
+  <div>Most playback functions</div>
+<div class="detail">
+  Play, pause, speed, seek, subtitle, volume, audio channel, audio track, dynamically renderer switching, video equalizer, custom filters for both window and video frame, network stream, video crop, multiple renderers, hardware decoding...
+  With the help of FFmpeg, QtAV is able to play most media formats, without installing other codecs.
+</div>
+</div>
+<div class="feature">
+  <div>Real Time Preview</div>
+  <div class="detail">
+    New experience
+    <div class="img-container">
+      <img src="screenshots/QMLPlayer-preview.jpg" alt="Timeline preview" title="Timeline preview" class="cropped">
+    </div>
+  </div>
+</div>
+<div class="feature">
+  <div>High Resolution High Frame Rate Video</div>
+<div class="detail">
+  Better than any other players(Windows, Linux, Mac etc) with software decoding. Test file: <a href="http://pan.baidu.com/s/1sj6s40l">H264 4k 120fps</a>
+</div>
+</div>
+<div class="feature">
+  <div>Hardware Decoding for Many Platforms</div>
+<div class="detail">
+  Supports DXVA, VA-API, CUDA, VDA, Cedarv. Direct rendering(0 copy, the same thing as Lavfilters native mode) is also supported for VA-API and it gives you better performance. Direct rendering will be support for DXVA, CUDA and VDA in the future.
+</div>
+</div>
+<div class="feature">
+  <div>HEVC Hardwared Decoding by DXVA2</div>
+<div class="detail">
+  New Intel GPU and driver is required. Tested: Intel HD 4700, NVIDIA GT750M
+</div>
+</div>
+<div class="feature">
+<div>CUDA for Windows and Linux</div>
+<div class="detail">
+  Decoding with CUDA is supported since 1.3.3. It's the first player/library supports CUDA on Linux(tell me if i'm wrong)
+</div>
+</div>
+<div class="feature">
+  <div>Hi10P Hardware Decoding by CUDA</div>
+<div class="detail">
+  Some NVIDIA cards support Hi10P. I tested GT540M and GT750M. Better performace than any other players.
+</div>
+</div>
+<div class="feature">
+  <div>Hi10P OpenGL and ES2 Renderering</div>
+<div class="detail">
+  Rendering 16-bit YUV is supported in QtAV using OpenGL and OpenGL ES2(and ANGLE). Supported formats: 9, 10, 12, 14, 16 bit planar YUV, both little/big endian.
+  AFAIK, those famous player such as VLC, XBMC and mplayer can not renderering it using OpenGL ES2. They only support desktop OpenGL.
+  Obviously QtAV has better performance. I tested a 10bit h264 video (download here: http://ps-auxw.de/10bit-h264-sample) on HTC Butterfly S. QtAV cpu usage is about 10% less than VLC!
+</div>
+</div>
+<script type="text/javascript">
+
+$(".feature").hover(
+  function() {
+    console.log("hover in");
+    $(this).children(".detail").fadeIn();
+  },
+  function() {
+    $(this).children(".detail").fadeOut();
+  }
+);
+</script>
+<div id="logos">
     <style type="text/css">
   #features img {
     max-width: 100px;
@@ -191,49 +289,12 @@ $(function() {
   <a href="http://www.portaudio.com/download.html"><img src="http://www.portaudio.com/images/portaudio_logotext.png" alt="PortAudio" title="PortAudio v19" class="GROW"></a>
   <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Microsoft-DirectX-Logo-wordmark.svg/220px-Microsoft-DirectX-Logo-wordmark.svg.png" alt="DirectX" style="background-color:#ffffff;" class="GROW">
   <a href="https://developer.nvidia.com/about-cuda"><img src="https://developer.nvidia.com/sites/default/files/akamai/cuda/images/product_logos/NV_CUDA_wider.jpg" alt="CUDA", title="NVIDIA CUDA" class="GROW"></a>
-  </div>
-<h1>Features</h1>
-<p>
-  Supports most playback functions. Play, pause, speed, seek, subtitle, volume, audio channel, audio track, dynamically renderer switching, video equalizer, custom filters for both window and video frame, network stream, video crop, multiple renderers, hardware decoding...
-</p>
-<p>
-  With the help of FFmpeg, QtAV is able to play most media formats, without installing other codecs.
-</p>
-<h3>Real Time Preview</h3>
-<h3>High Resolution High Frame Rate Video</h3>
-<p>
-  Better than any other players(Windows, Linux, Mac etc) with software decoding. Test file: <a href="http://pan.baidu.com/s/1sj6s40l">H264 4k 120fps</a>
-</p>
-<h3>Hardware Decoding for Many Platforms</h3>
-<p>
-  Supports DXVA, VA-API, CUDA, VDA, Cedarv. Direct rendering(0 copy, the same thing as Lavfilters native mode) is also supported for VA-API and it gives you better performance. Direct rendering will be support for DXVA, CUDA and VDA in the future.
-</p>
-<h3>HEVC Hardwared Decoding by DXVA2</h3>
-<p>
-  New Intel GPU and driver is required. Tested: Intel HD 4700, NVIDIA GT750M
-</p>
-<h3>CUDA for Windows and Linux</h3>
-<p>
-  Decoding with CUDA is supported since 1.3.3. It's the first player/library supports CUDA on Linux(tell me if i'm wrong)
-</p>
-<h3>Hi10P Hardware Decoding by CUDA</h3>
-<p>
-  Some NVIDIA cards support Hi10P. I tested GT540M and GT750M. Better performace than any other players.
-</p>
-<h3>Hi10P OpenGL and ES2 Renderering</h3>
-<p>
-  Rendering 16-bit YUV is supported in QtAV using OpenGL and OpenGL ES2(and ANGLE). Supported formats: 9, 10, 12, 14, 16 bit planar YUV, both little/big endian.
-  AFAIK, those famous player such as VLC, XBMC and mplayer can not renderering it using OpenGL ES2. They only support desktop OpenGL.
-  Obviously QtAV has better performance. I tested a 10bit h264 video (download here: http://ps-auxw.de/10bit-h264-sample) on HTC Butterfly S. QtAV cpu usage is about 10% less than VLC!
-</p>
+</div><!-- logos-->
 
-</div>
+</div><!--features-->
 
 
 <div id="performance" style="margin-top:40px;">
-  <h1>Performance</h1>
-  QtAV supports hardware decoding and OpenGL renderering. The performance is quite good. You can compare QtAV with VLC, XBMC and MPV.
-
 <!-- TODO: generate SVG from data on the fly-->
 <!--
   <div>
