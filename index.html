@@ -9,6 +9,7 @@
     <script src="javascripts/jquery-1.9.1.min.js"></script>
     <script src="javascripts/respond.js"></script>
     <script src="javascripts/footer.js"></script>
+    <script src="javascripts/donors.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -66,9 +67,11 @@
   width: 50%;
   font-size: 20px;
   padding: 10px;
+  margin: -10%;
   display:none;
   position:absolute;
   background-color: #00539F;
+  z-index: 100;
 }
 /*http://stackoverflow.com/questions/5005244/vertical-align-center-image-in-fixed-size-div*/
 div.img-container {
@@ -226,7 +229,7 @@ $(function() {
 <div class="feature">
   <div>High Resolution High Frame Rate Video</div>
 <div class="detail">
-  Better than any other players(Windows, Linux, Mac etc) with software decoding. Test file: <a href="http://pan.baidu.com/s/1sj6s40l">H264 4k 120fps</a>
+  Better experience than any other players(Windows, Linux, Mac etc) with software decoding. Test file: <a href="http://pan.baidu.com/s/1sj6s40l">H264 4k 120fps</a>
 </div>
 </div>
 <div class="feature">
@@ -265,7 +268,6 @@ $(function() {
 
 $(".feature").hover(
   function() {
-    console.log("hover in");
     $(this).children(".detail").fadeIn();
   },
   function() {
@@ -386,7 +388,23 @@ Item {
 -->
 
 <div id="donate" style="margin-top:40px;">
-<h1> Donate 资助 </h1>
+  <script>
+  </script>
+<div>
+<h1 id="donor-list"> Donate 资助</h1>
+  <script>
+  DonationHistory.createTag();
+  $("#donor-list").hover(
+    function() {
+      console.log("hover in");
+      $("#donors").fadeIn();
+    },
+    function() {
+      $("#donors").fadeOut();
+    }
+  );
+  </script>
+</div>
 <table style="border:none;">
   <tr>
     <!--
