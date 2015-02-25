@@ -33,7 +33,6 @@
     </script>
 <!-- https://developers.google.com/+/web/share/ -->
 <!--  <script id="gapi" type="text/javascript" src="https://apis.google.com/js/platform.js">{lang: 'zh-HK'}</script>-->
-
     <style type="text/css">
 .GL
 {
@@ -87,6 +86,11 @@ img.cropped {
     min-height: 100%;
 }
     </style>
+
+    <!-- L20n setup -->
+    <link rel="localization" href="locales/manifest.json">
+    <!-- Include the dist version of L20n -->
+    <script src="javascripts/l20n.min.js"></script>
   </head>
 
   <body>
@@ -100,7 +104,7 @@ img.cropped {
           <li class="downloads"><a href="https://github.com/wang-bin/QtAV/tarball/master">TAR</a></li>
   -->
           <li class="downloads"><a href="https://sourceforge.net/projects/qtav">Binary</a></li>
-          <li class="title">DOWNLOADS</li>
+          <li class="title" data-l10n-id="DOWNLOADS"></li>
         </nav>
       </div><!-- end header -->
 
@@ -109,8 +113,7 @@ img.cropped {
       <section>
         <div id="title">
           <h1>QtAV</h1>
-          <p>A multimedia playback framework based on Qt + FFmpeg. Cross platform. High performace. Easy to use and develop</p>
-          <p>基于Qt和FFmpeg的跨平台高性能音视频播放框架</p>
+          <p data-l10n-id="qtav_about"></p>
           <p style="font-size:14px;">Library license: LGPL v2.1+. Examples license: GPL v3</p>
           <span class="credits left">Project maintained by <a href="https://github.com/wang-bin">wang-bin</a></span>
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
@@ -198,71 +201,57 @@ $(function() {
 
 <div style="margin-top:60px;">
 <h1><a name="news" class="anchor" href="#news"><span class="octicon octicon-link"></span></a>News</h1>
-<h2>2015-02-13: <a href="blog/1.5.0.html">1.5.0 Released</a></h2>
-<h2>2015-02-12: <a href="http://planet.linuxdeepin.com/freely-play-with-ultimate-fluency-deepin-movie-v2-2-enjoy-your-audio-visual-feast">Deepin Movie 2.2 Released. QtAV becomes it's backend</a><h2>
-<h2>2014-12-27: <a href="blog/1.4.2.html">1.4.2 Released</a></h2>
-<h2>2014-11-06: <a href="blog/1.4.1.html">1.4.1 Released</a></h2>
-<h2>2014-09-10: <a href="blog/1.4.0.html">1.4.0 Released</a></h2>
-<h2>2014-06-09: Audio works on Android. <a href="http://sourceforge.net/projects/qtav/files/release/1.3.4/QtAV1.3.4-QMLPlayer-android-arm-20140610.apk/download">Download QMLPlayer for Android</a></h2>
-<h2>2014-05-30: <a href="blog/1.3.4.html">1.3.4 Released</a></h2>
+<h3>2015-02-13: <a href="blog/1.5.0.html">1.5.0 Released</a></h3>
+<h3>2015-02-12: <a href="http://planet.linuxdeepin.com/freely-play-with-ultimate-fluency-deepin-movie-v2-2-enjoy-your-audio-visual-feast">Deepin Movie 2.2 Released. QtAV becomes it's backend</a><h3>
+<h3>2014-12-27: <a href="blog/1.4.2.html">1.4.2 Released</a></h3>
+<h3>2014-11-06: <a href="blog/1.4.1.html">1.4.1 Released</a></h3>
+<h3>2014-09-10: <a href="blog/1.4.0.html">1.4.0 Released</a></h3>
+<h3>2014-06-09: Audio works on Android. <a href="http://sourceforge.net/projects/qtav/files/release/1.3.4/QtAV1.3.4-QMLPlayer-android-arm-20140610.apk/download">Download QMLPlayer for Android</a></h3>
+<h3>2014-05-30: <a href="blog/1.3.4.html">1.3.4 Released</a></h3>
 </div>
 
 
 <div id="features" style="margin-top:40px;">
-<h1>Features</h1>
+<h1 data-l10n-id="Features"></h1>
 <div class="feature">
-  <div>Most playback functions</div>
-<div class="detail">
-  Play, pause, speed, seek, subtitle, volume, audio channel, audio track, dynamically renderer switching, video equalizer, custom filters for both window and video frame, network stream, video crop, multiple renderers, hardware decoding...
-  With the help of FFmpeg, QtAV is able to play most media formats, without installing other codecs.
-</div>
+  <div data-l10n-id="playback_funcitons"></div>
+<div class="detail" data-l10n-id="playback_funcitons_detail"></div>
 </div>
 <div class="feature">
-  <div>Real Time Preview</div>
+  <div data-l10n-id="rt_preview"></div>
   <div class="detail">
-    New experience
+    <div data-l10n-id="rt_preview_detail"></div>
     <div class="img-container">
       <img src="screenshots/QMLPlayer-preview.jpg" alt="Timeline preview" title="Timeline preview" class="cropped">
     </div>
   </div>
 </div>
 <div class="feature">
-  <div>High Resolution High Frame Rate Video</div>
-<div class="detail">
-  Better experience than any other players(Windows, Linux, Mac etc) with software decoding. Test file: <a href="http://pan.baidu.com/s/1sj6s40l">H264 4k 120fps</a>
+  <div data-l10n-id="hi_video"></div>
+<div class="detail" data-l10n-id="hi_video_detail">
+  <a href="http://pan.baidu.com/s/1sj6s40l">H264 4k 120fps</a>
 </div>
 </div>
 <div class="feature">
-  <div>Hardware Decoding for Many Platforms</div>
-<div class="detail">
-  Supports DXVA, VA-API, CUDA, VDA, Cedarv. Direct rendering(0 copy, the same thing as Lavfilters native mode) is also supported for VA-API and it gives you better performance. Direct rendering will be support for DXVA, CUDA and VDA in the future.
+  <div data-l10n-id="hw_platforms"></div>
+<div class="detail" data-l10n-id="hw_platforms_detail"></div>
+</div>
+<div class="feature">
+  <div data-l10n-id="hevc_dxva"></div>
+<div class="detail" data-l10n-id="hevc_dxva_detail"></div>
+</div>
+<div class="feature">
+<div data-l10n-id="cuda_win"></div>
+<div class="detail" data-l10n-id="cuda_win_detail">
 </div>
 </div>
 <div class="feature">
-  <div>HEVC Hardwared Decoding by DXVA2</div>
-<div class="detail">
-  New Intel GPU and driver is required. Tested: Intel HD Graphics 4600, NVIDIA GT750M
-</div>
+  <div data-l10n-id="hi10p_cuda"></div>
+<div class="detail" data-l10n-id="hi10p_cuda_detail"></div>
 </div>
 <div class="feature">
-<div>CUDA for Windows and Linux</div>
-<div class="detail">
-  Decoding with CUDA is supported since 1.3.3. It's the first player/library supports CUDA on Linux(tell me if i'm wrong)
-</div>
-</div>
-<div class="feature">
-  <div>Hi10P Hardware Decoding by CUDA</div>
-<div class="detail">
-  Some NVIDIA cards support Hi10P. I tested GT540M and GT750M. Better performace than any other players.
-</div>
-</div>
-<div class="feature">
-  <div>Hi10P OpenGL and ES2 Renderering</div>
-<div class="detail">
-  Rendering 16-bit YUV is supported in QtAV using OpenGL and OpenGL ES2(and ANGLE). Supported formats: 9, 10, 12, 14, 16 bit planar YUV, both little/big endian.
-  AFAIK, those famous player such as VLC, XBMC and mplayer can not renderering it using OpenGL ES2. They only support desktop OpenGL.
-  Obviously QtAV has better performance. I tested a 10bit h264 video (download here: http://ps-auxw.de/10bit-h264-sample) on HTC Butterfly S. QtAV cpu usage is about 10% less than VLC!
-</div>
+  <div data-l10n-id="hi10p_gl"></div>
+<div class="detail" data-l10n-id="hi10p_gl_detail"></div>
 </div>
 <script type="text/javascript">
 
@@ -309,32 +298,27 @@ $(".feature").hover(
 </div>
 
 <div id="platforms" style="margin-top:40px;">
-  <h1>Platforms</h1>
-  Currently QtAV can run on Windows, Linux, Mac OSX, Android, iOS(works fine on simulator), MeeGo, Sailfish OS(since QtAV1.3.3).
-  <p>
-    Other platforms such as WinRT, Windows Phone, BlackBerry will also be supported if I have development environment and devices.
-  </p>
+  <h1 data-l10n-id="platforms">Platforms</h1>
+  <div data-l10n-id="platforms_detail"></div>
   <div id="ytplayer">
   <h4><a href="http://www.youtube.com/watch?v=u3mvDe3GBPI">Video: QtAV based qmlvideofx with CedarV hardware decoding</a></h4>
   </div>
 </div>
 
 <div id="why" style="margin-top:40px;">
-<h1>Why Not QtMultimedia? Why QtAV?</h1>
+<h1 data-l10n-id="qtmm_qtav"></h1>
 <ul>
-  <li>QtMultimedia in Qt4 is poor. QtAV works fine for both Qt4 and Qt5.
-  <li>QtMultimedia's implemention is platform depended. It use dshow on windows, gstream on linux etc. May be not an easy work to support a new platform. While QtAV use FFmpeg, works for most platforms. No additional work required.
-  </li>
-  <li>Additional codecs may be required to make QtMultimedia work</li>
-  <li>QtAV supports more video formats</li>
-  <li>QtAV has more powerful playback features and better performace than QtMultimedia. For example, hardware decoding, subtitle.</li>
+  <li data-l10n-id="qtmm_qtav_qt4"></li>
+  <li data-l10n-id="qtmm_qtav_depends"></li>
+  <li data-l10n-id="qtmm_qtav_codecs"></li>
+  <li data-l10n-id="qtmm_qtav_formats"></li>
+  <li data-l10n-id="qtmm_qtav_features"></li>
 </ul>
 </div>
 
 <div>
-<h1 style="margin-top:40px;">
+<h1 style="margin-top:40px;" data-l10n-id="easy_api">
 <a name="for-developers" class="anchor" href="#for-developers"><span class="octicon octicon-link"></span></a>
-  Easy API for Developers
 </h1>
 The required libraries to build QtAV: <a href="https://sourceforge.net/projects/qtav/files/depends/">FFmpeg and OpenAL</a>, <a href="https://sourceforge.net/projects/buildqt/files/release">Qt.</a>
 How to use<a href="https://github.com/wang-bin/QtAV/wiki/Use-QtAV-In-Your-Projects">Use QtAV In Your Project</a> and <a href="https://github.com/wang-bin/QtAV/tree/master/examples">examples</a>
@@ -391,7 +375,7 @@ Item {
   <script>
   </script>
 <div>
-<h1 id="donor-list"> Donate 资助</h1>
+<h1 id="donor-list" data-l10n-id="donate"></h1>
   <script>
   DonationHistory.createTag();
   $("#donor-list").hover(
@@ -407,27 +391,14 @@ Item {
 </div>
 <table style="border:none;">
   <tr>
-    <!--
-    <td style="vertical-align:top;">
-      <script type="text/javascript" src="http://www.ohloh.net/p/678754/widgets/project_cocomo.js"></script>
-    </td>
-    <td>
-    软件几乎由我一人利用空余学习和工作时间开发。如果您觉得不错，可以考虑资助一下。
-  <ul>
-    <li>购买硬件使QtAV更好的支持各种硬件，如AMD显卡，WinRT设备等</li>
-    <li>iOS设备的开发环境</li>
-    <li>捐助给项目参与者</li>
-  </ul>
-    </td>
-  -->
   <td style="vertical-align:top;">
+    <div data-l10n-id="donate_desc"></div>
 <!--      This software is almost developed by myself. If you find the program useful and would like to support my efforts, please consider donating what you think the program is worth.-->
-Donations are used solely for purchasing hardware to improve and extend QtAV.
   <ul>
-    <li>AMD graphics card, winrt devices etc.</li>
-    <li>iOS development environment</li>
-    <li>Sailfish, Ubuntu One, BlackBerry devices</li>
-    <li>Donate to contributors</li>
+    <li data-l10n-id="donate_gpu"></li>
+    <li data-l10n-id="donate_ios"></li>
+    <li data-l10n-id="donate_devices"></li>
+    <li data-l10n-id="donate_contributors"></li>
   </ul>
     </td>
     <!--

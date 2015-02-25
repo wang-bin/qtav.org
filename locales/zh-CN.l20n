@@ -1,0 +1,57 @@
+<qtav_about "基于Qt和FFmpeg的跨平台高性能音视频播放框架">
+
+<DOWNLOADS "下载">
+
+<Features "特色">
+
+<playback_funcitons "支持大部分播放功能">
+<playback_funcitons_detail """
+播放、暂停、播放速度、快进快退、字幕、音量、声道、音轨、动态渲染器切换、视频均衡器、帧上和渲染器上的自定义滤镜、网络流、裁减、一个视频多渲染器、GPU硬件解码等...
+由于使用 FFmpeg, QtAV 可以支持几乎所有格式而不需要安装其他解码器。
+""">
+<rt_preview "实时预览">
+<rt_preview_detail "看片新体验">
+<hi_video "高清高帧率视频">
+<hi_video_detail "软解播放比其他任何播放器有更好的体验(Windows、linux、Mac等系统)。测试文件: ">
+<hw_platforms "多平台 GPU 硬件解码">
+<hw_platforms_detail "支持 DXVA, VA-API, CUDA, VDA, Cedarv。VA-API支持直接渲染(零拷贝, 相当于 Lavfilters 的 native 模式)，性能更优，其他硬解将在日后支持。">
+<hevc_dxva "DXVA2 HEVC 硬件解码">
+<hevc_dxva_detail "需要新的 Intel GPU 和驱动。已测: Intel HD Graphics 4600, NVIDIA GT750M">
+<cuda_win "CUDA 支持 Windows、Linux">
+<cuda_win_detail "CUDA 自 QtAV1.3.3 开始支持. QtAV 是第一个在 Linux 上支持 CUDA 解码的音视频框架（和播放器）(若有误请指正)">
+<hi10p_cuda "CUDA Hi10P 硬解">
+<hi10p_cuda_detail "较新的 NVIDIA 显卡已经支持 10bit H.264 解码。性能超越了其他任何播放器。我测试了 GT540M、GT750M。">
+<hi10p_gl "OpenGL、OpenGL ES2 渲染 Hi10P">
+<hi10p_gl_detail """
+QtAV 支持 OpenGL 和 OpenGL ES2 渲染大于 8bit 的 YUV 视频。现支持 9, 10, 12, 14, 16 bit 的平面格式 YUV, 包括 little/big endian。
+据我所知, 那些知名的播放器比如 mpv、VLC、XBMC 和 mplayer 只支持用桌面的 OpenGL 渲染 16bit，而不支持 OpenGL ES2。
+显然 QtAV 会有更好的性能。我在 HTC Butterfly S 上测试了 10bit h264 视频 (下载: http://ps-auxw.de/10bit-h264-sample)，
+QtAV 的 CPU 使用率比 VLC 少大概 10%!
+""">
+
+<platforms "支持平台">
+<platforms_detail """
+  QtAV 可以运行于 Windows、Linux、OSX、Android、iOS(模拟器里已测正常)、MeeGo、Sailfish OS。
+  其他平台比如 WinRT、Windows Phone、BlackBerry 也会支持，但是缺少开发环境和测试设备。
+""">
+
+<qtmm_qtav "为什么选择 QtAV 而非 QtMultimedia?">
+<qtmm_qtav_qt4 "QtMultimedia 无法支持 Qt4。QtAV 同时支持 Qt4 和 Qt5">
+<qtmm_qtav_depends """
+  QtMultimedia's 的实现依赖与平台，比如 Windows 上使用 DShow, Linux 上使用 gstreamer等。移植新平台比较困难。
+  而 QtAV 使用 FFmpeg, 支持绝大部分平台，无需额外的工作。
+""">
+<qtmm_qtav_codecs "QtMultimedia 可能需要额外的解码器才能正常工作">
+<qtmm_qtav_formats "QtAV 支持绝大部分格式">
+<qtmm_qtav_features "QtAV 拥有更强大的播放功能和更高的性能，比如字幕、硬解。">
+
+<easy_api "简单易用的接口">
+
+<donate "捐赠">
+<donate_desc """
+  捐赠的资金将主要用于保证 QtAV 项目的维护及更多硬件支持。
+""">
+<donate_gpu "AMD, NVIDIA 显卡">
+<donate_ios "iOS 开发环境">
+<donate_devices "Sailfish, Ubuntu One, BlackBerry and Windows Phone 等设备">
+<donate_contributors "其他贡献者">
