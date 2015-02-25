@@ -1,0 +1,3 @@
+[submodule "l20n"]
+	path = l20n
+	url = https://github.com/l20n/builds.git
