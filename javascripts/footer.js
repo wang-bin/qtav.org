@@ -17,8 +17,9 @@ var Footer = {
     console.log(downloads);
     document.write(
         '<footer style="position:fixed; font-size:20px; text-align:right; bottom:20px; margin-left:-25%; height:30px; width:100%;">'
-      + '<a style="color:#a5ff00;">QQ群: 121572305</a>'
-      + '<a style="color:#a5ff00;">IRC: #qtav</a>'
+      + '<a style="color:#a5ff00;"> QQ群:121572305 </a>'
+      + '<a style="color:#a5ff00;"> IRC:#qtav </a>'
+      + '<a href="https://groups.google.com/forum/#!forum/qtav"> Maillist </a>'
       + downloads
       + '<a href="#donate" style="color:#ffa500;">Donate</a>'
       + '<div class="g-plus" data-action="share"></div></footer>'
