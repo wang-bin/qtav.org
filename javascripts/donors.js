@@ -9,12 +9,13 @@ var kDonators = [
   {date: "2015-02-05", name: "MyndPlay Ltd", value: "50 USD"},
   {date: "2015-02-14", name: "Mario Zeller", value: "20 EUR"},
   {date: "2015-02-17", name: "Tomasz Ziobrowski", value: "50 EUR"},
+  {date: "2015-03-13", name: "张敏", value: "20 CNY"},
 ];
 
 var DonationHistory = {
   createTag: function() {
     var doc = "<table id='donors' class='detail'>";
-    kDonators.forEach(function(d){
+    kDonators.reverse().forEach(function(d){
       doc += "<tr><td>" + d.date + "</td><td>" + d.name + "</td><td>" + d.value + "</td></tr>";
     });
     doc += "</table>";
