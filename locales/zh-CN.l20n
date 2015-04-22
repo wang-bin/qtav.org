@@ -14,7 +14,7 @@
 <hi_video "高清高帧率视频">
 <hi_video_detail "软解播放比其他任何播放器有更好的体验(Windows、linux、Mac等系统)。测试文件: ">
 <hw_platforms "多平台 GPU 硬件解码">
-<hw_platforms_detail "支持 DXVA, VA-API, CUDA, VDA, Cedarv。VA-API支持直接渲染(零拷贝, 相当于 Lavfilters 的 native 模式)，性能更优，其他硬解将在日后支持。">
+<hw_platforms_detail "支持 DXVA, VA-API, CUDA, VDA, Cedarv。其中VA-API和VDA已支持直接渲染(零拷贝, 相当于 Lavfilters 的 native 模式)，性能更优，其他硬解将在日后支持。QtAV的VDA解码器比其他播放器性能更高。">
 <hevc_dxva "DXVA2 HEVC 硬件解码">
 <hevc_dxva_detail "需要新的 Intel GPU 和驱动。已测: Intel HD Graphics 4600, NVIDIA GT750M">
 <cuda_win "CUDA 支持 Windows、Linux">
