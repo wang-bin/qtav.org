@@ -1,10 +1,11 @@
 "use strict";
 //strict: const, let ... not work in safari
 var kSF = "http://sourceforge.net/projects/qtav/files/release";
-var kOS = [{url: "1.5.0/QtAV1.5.0-MinGW32.exe", icon: "images/DL_Windows.png"},
+var kOS = [
+  {url: "MinGW32.exe", icon: "images/DL_Windows.png"},
   {url: "Linux64.run", icon: "images/DL_Linux.png"},
-  {url: "Player-OSX.dmg", icon: "images/DL_OSX.png"},
-  {url: "QMLPlayer-android-armv7a.apk", icon: "images/DL_Android.png"},
+  {url: "QMLPlayer.dmg", icon: "images/DL_OSX.png"},
+  {url: "QMLPlayer-android-armv7.apk", icon: "images/DL_Android.png"},
 ];
 
 var Footer = {
