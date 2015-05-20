@@ -409,34 +409,48 @@ Item {
 <tr>-->
 
   <td>
-  <div>
-  <img width="50" height="35" src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg" alt="PayPal"></img>
-  <!--<img src="http://upload.wikimedia.org/wikipedia/foundation/7/78/Credit_cards.png" alt="Visa, MasterCard, Discover, American Express, eCheck"></img>-->
-  </div>
-  <form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-  <input type="hidden" name="cmd" value="_xclick">
-  <input type="hidden" name="business" value="06122952wb@163.com">
-  <input type="hidden" name="no_shipping" value="1">
-  <input type="hidden" name="item_name" value="Donation for QtAV">
-  <input type="text" name="amount" value="10.00" onkeyup="if(!/^\d*.?\d{0,2}$/.test(this.value))this.value=this.value.replace(/[^\d.]/g,'').replace(/(^\d*.?\d{0,2}).*/g,'$1')" class="GROW">
-  <select name="currency_code" class="GROW">
-      <option value="USD" selected="selected">$ (USD)</option>
-      <option value="EUR">€ (EUR)</option>
-      <option value="HKD">$ (HKD)</option>
-      <option value="GBP">£ (GBP)</option>
-      <option value="CAD">$ (CAD)</option>
-      <option value="AUD">$ (AUD)</option>
-      <option value="JPY">¥ (JPY)</option>
-  </select>
-  <div>
-    <input type="image" src="http://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" name="submit" alt="Make payments with PayPal - it is fast, free and secure!" class="GROW">
-    <input type="image" src="http://www.paypal.com/zh_CN/i/btn/btn_donate_LG.gif" name="submit" alt="Make payments with PayPal - it is fast, free and secure!" class="GROW">
-  </div>
-  </form>
-</div>
+    <div id="paypal" align="center">
+    <form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <input name="cmd" value="_xclick" type="hidden">
+    <input name="business" value="06122952wb@163.com" type="hidden">
+    <input name="no_shipping" value="1" type="hidden">
+    <input name="item_name" value="Donation for QtAV development" type="hidden">
+    <input name="amount" value="10.00" type="text" maxlength="30" size="10"  onkeyup="if(!/^\d*.?\d{0,2}$/.test(this.value))this.value=this.value.replace(/[^\d.]/g,'').replace(/(^\d*.?\d{0,2}).*/g,'$1')" class="GROW">
+    <select name="currency_code" class="GROW">
+        <option value="USD" selected="selected">$ (USD)</option>
+        <option value="EUR">€ (EUR)</option>
+        <option value="HKD">$ (HKD)</option>
+        <option value="GBP">£ (GBP)</option>
+        <option value="CAD">$ (CAD)</option>
+        <option value="AUD">$ (AUD)</option>
+        <option value="JPY">¥ (JPY)</option>
+    </select>
+    <div>
+      <script>
+        var lang = navigator.language || navigator.browserLanguage;
+        document.write('<input type="image" src="http://www.paypal.com/' + lang.replace("-","_") + '/i/btn/btn_donate_LG.gif" name="submit" alt="Make payments with PayPal - it is fast, free and secure!" class="GROW">')
+        if (lang !== "en-US")
+          document.write('<input type="image" src="http://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" name="submit" alt="Make payments with PayPal - it is fast, free and secure!" class="GROW">')
+      </script>
+    </div>
+    </form>
+    <div>
+      <img width="50" height="35" src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg" alt="PayPal">
+      <!--<img src="http://upload.wikimedia.org/wikipedia/foundation/7/78/Credit_cards.png" alt="Visa, MasterCard, Discover, American Express, eCheck">-->
+    </div>
+    </div>
+    <div id="alipay_web" align="center">
+      <form action="https://shenghuo.alipay.com/send/payment/fill.htm" method="post" target="_blank" style="display:inline">
+        <input src="images/btn-alipay.png" name="submit" alt="支付宝捐赠" border="0" type="image" class="GROW">
+        <input name="optEmail" value="06122952wb@163.com" type="hidden">
+        <input name="title" value="QtAV development" type="hidden">
+        <input name="memo" value=":" type="hidden">
+        <input name="payAmount" value="" type="hidden">
+      </form>
+    </div>
   </td>
   <td>
-    <div>
+    <div id="alipay">
       <!--<p><a href="https://me.alipay.com/lucaswang"><img src="https://img.alipay.com/sys/personalprod/style/mc/btn-index.png" alt="Alipay" class="GROW"></a></p>-->
       <img src="images/apbihytg7x2iyb8g0f-50x50.png" alt="Alipay" class="GROW" style="background-color: #ffffff">
     </div>
@@ -489,6 +503,7 @@ img.onerror = cantload;
 </script>
 [url=http://www4.clustrmaps.com/user/d87118de8][img]http://www4.clustrmaps.com/stats/maps-no_clusters/www.qtav.org-thumb.jpg[/img][/url]
 -->
+
 
 <div>
   <script >Footer.create("1.6.0", "");</script>

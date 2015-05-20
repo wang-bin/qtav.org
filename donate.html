@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>QtAV by wang-bin</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/jquery-1.9.1.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <script src="javascripts/footer.js"></script>
+    <script src="javascripts/donors.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script type="text/javascript">
+        if(!String.prototype.startsWith){
+        String.prototype.startsWith = function (str) {
+                return !this.indexOf(str);
+            }
+        }
+        var old = "http://wang-bin.github.io/QtAV";
+        if (location.href.startsWith(old)) {
+            var loc = location.href;
+            var suf = loc.substring(old.length, loc.length);
+            loc = "http://wang-bin.github.io/qtav.org" + suf;
+            window.location.replace(loc);
+        }
+    </script>
+<!-- https://developers.google.com/+/web/share/ -->
+<!--  <script id="gapi" type="text/javascript" src="https://apis.google.com/js/platform.js">{lang: 'zh-HK'}</script>-->
+    <style type="text/css">
+.GL
+{
+  float: left;
+  display: inline;
+  *margin-left:-0.04em; /* IE margin hack */
+  /*border:1px solid black;*/
+  margin: 1px;
+  padding: 0px;
+  position:relative;
+}
+.GROW:hover
+{
+  /*border:1px solid #9f9;*/
+  /* CSS3 inset shadow: */
+  -moz-box-shadow:0 0 30px #9f9;
+  -webkit-box-shadow:0 0 30px #9f9;
+  box-shadow:0 0 30px #9f9;
+
+}
+    </style>
+
+    <!-- L20n setup -->
+    <link rel="localization" href="locales/manifest.json">
+    <!-- Include the dist version of L20n -->
+    <script src="javascripts/l20n.min.js"></script>
+  </head>
+  </head>
+<body>
+  <div id="header">
+    <nav>
+      <li class="fork"><a href="https://github.com/wang-bin/QtAV">Fork On GitHub</a></li>
+      <li class="fork"><a href="https://github.com/wang-bin/QtAV/wiki/_pages">Wiki</a></li>
+      <li class="fork"><a href="https://github.com/wang-bin/QtAV/issues">Issues</a></li>
+  <!--
+      <li class="downloads"><a href="https://github.com/wang-bin/QtAV/zipball/master">ZIP</a></li>
+      <li class="downloads"><a href="https://github.com/wang-bin/QtAV/tarball/master">TAR</a></li>
+  -->
+      <li class="downloads"><a href="https://sourceforge.net/projects/qtav">Binary</a></li>
+      <li class="title" data-l10n-id="DOWNLOADS"></li>
+    </nav>
+  </div><!-- end header -->
+
+  <div class="wrapper">
+
+  <section>
+<!--
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" name="_xclick">
+<input name="cmd" value="_xclick-subscriptions" type="hidden">
+<input name="business" value="06122952wb@163.com" type="hidden">
+<input name="no_shipping" value="1" type="hidden">
+<input name="item_name" value="Donation for QtAV development" type="hidden" >
+<input name="p3" value="1" type="hidden">
+<input name="t3" value="M" type="hidden">
+<input name="src" value="1" type="hidden">
+<input name="sra" value="1" type="hidden">
+<input name="on0" value="Anonymity" type="hidden">
+<input name="on1" value="username" type="hidden">
+<div style="text-align: center;">
+  <input id="user_amount"  value="10.00" maxlength="30" name="a3" size="7" type="text"  onkeyup="if(!/^\d*.?\d{0,2}$/.test(this.value))this.value=this.value.replace(/[^\d.]/g,'').replace(/(^\d*.?\d{0,2}).*/g,'$1')">
+  <select name="currency_code">
+      <option value="USD" selected="selected">$ (USD)</option>
+      <option value="EUR">€ (EUR)</option>
+      <option value="HKD">$ (HKD)</option>
+      <option value="GBP">£ (GBP)</option>
+      <option value="CAD">$ (CAD)</option>
+      <option value="AUD">$ (AUD)</option>
+      <option value="JPY">¥ (JPY)</option>
+  </select>
+  /month(月)
+</div>
+<div style="text-align: center;">
+  <input style="margin-top: 10px; margin-left: 20px;" alt="Make payments with PayPal - it's fast, free and secure!" name="submit" src="https://www.paypal.com/en_US/i/btn/btn_subscribe_LG.gif" type="image">
+  <input style="margin-top: 10px; margin-left: 20px;" alt="Make payments with PayPal - it's fast, free and secure!" name="submit" src="https://www.paypal.com/zh_CN/i/btn/btn_subscribe_LG.gif" type="image">
+</div>
+</form>
+
+-->
+<!--
+https://developer.paypal.com/webapps/developer/docs/classic/button-manager/integration-guide/NVP/ButtonMgrOverview/
+https://www.paypal.com/c2/cgi-bin/webscr?cmd=_flow&SESSION=LaQw-5ElY4yfgJ0kXeiojUw_x6QhSLA-1RehGzmiNehQiiISVcuAQM46uXq&dispatch=5885d80a13c0db1f8e263663d3faee8d99e4111b56ef0eae45e68b8988f5b2dd
+https://developer.paypal.com/webapps/developer/docs/classic/button-manager/integration-guide/NVP/ButtonMgrOverview/
+https://www.v2ex.com/t/66885
+https://www.paypal.com/us/cgi-bin/?cmd=_donate-intro-outside
+
+[![PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5Q73FPZ9C526U)
+
+ -->
+<!-- https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5Q73FPZ9C526U -->
+
+<div id="paypal" align="center">
+  <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg" alt="PayPal">
+<form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<!--
+<input name="cmd" value="_donations" type="hidden">
+<input name="business" value="06122952wb@163.com" type="hidden">
+-->
+<!--
+<input name="cmd" value="_s-xclick" type="hidden">
+<input name="hosted_button_id" value="ATSV46DU68DQY" type="hidden">
+-->
+<input name="cmd" value="_xclick" type="hidden">
+<input name="business" value="06122952wb@163.com" type="hidden">
+ <!--
+  value="_donations" does not work for Chinese account?
+  _xclick: requires "bussiness: email"
+  _s-xclick: "hosted_button_id: id" ATSV46DU68DQY  . amount is fixed
+  -->
+<input name="no_shipping" value="1" type="hidden">
+<input name="item_name" value="Donation for QtAV development" type="hidden">
+<input name="amount" value="10.00" type="text" maxlength="30" size="10"  onkeyup="if(!/^\d*.?\d{0,2}$/.test(this.value))this.value=this.value.replace(/[^\d.]/g,'').replace(/(^\d*.?\d{0,2}).*/g,'$1')" class="GROW">
+<select name="currency_code" class="GROW">
+    <option value="USD" selected="selected">$ (USD)</option>
+    <option value="EUR">€ (EUR)</option>
+    <option value="HKD">$ (HKD)</option>
+    <option value="GBP">£ (GBP)</option>
+    <option value="CAD">$ (CAD)</option>
+    <option value="AUD">$ (AUD)</option>
+    <option value="JPY">¥ (JPY)</option>
+</select>
+<div>
+  <script>
+    var lang = navigator.language || navigator.browserLanguage;
+    document.write('<input type="image" src="http://www.paypal.com/' + lang.replace("-","_") + '/i/btn/btn_donate_LG.gif" name="submit" alt="Make payments with PayPal - it is fast, free and secure!" class="GROW">')
+    if (lang !== "en-US")
+      document.write('<input type="image" src="http://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" name="submit" alt="Make payments with PayPal - it is fast, free and secure!" class="GROW">')
+  </script>
+</div>
+</form>
+</div>
+<br>
+
+<div align="center">
+<!--<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=wbsecg1%40gmail%2ecom&lc=GB&item_name=Donation%20for%20QtAV%20development&button_subtype=services&currency_code=USD&bn=PP%2dBuyNowBF%3abtn_paynowCC_LG%2egif%3aNonHosted">
+-->
+  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7C2KZL2HJYAPG">
+    <img class="GROW" alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/btn/btn_paynowCC_LG.gif" alt="PayPal – The safer, easier way to pay online.">
+  </a>
+</div>
+<br>
+
+<div id="alipay_web" align="center">
+  <form action="https://shenghuo.alipay.com/send/payment/fill.htm" id="06122952wb@163.com" method="post" name="06122952wb@163.com" target="_blank" style="display:inline">
+    <input src="images/btn-alipay.png" name="submit" alt="支付宝捐赠" border="0" type="image" class="GROW">
+    <input name="optEmail" value="06122952wb@163.com" type="hidden">
+    <input name="title" value="QtAV development" type="hidden">
+    <input name="memo" value=": " type="hidden">
+    <input name="payAmount" value="" type="hidden">
+  </form>
+</div>
+
+<div id="alipay_qr" align="center">
+  <div align="center">或者扫二维码</div>
+  <!--<p><a href="https://me.alipay.com/lucaswang"><img src="https://img.alipay.com/sys/personalprod/style/mc/btn-index.png" alt="Alipay" class="GROW"></a></p>-->
+  <img src="images/apbihytg7x2iyb8g0f-50x50.png" alt="Alipay" class="GROW" style="background-color: #ffffff">
+</div>
+
+
+<div id="donor-list">
+Thanks
+<script>
+DonationHistory.createTag();
+$("#donors").hide()
+$("#donor-list").click(
+  function() {
+    console.log("hover in");
+    $("#donors").fadeIn();
+  }
+);
+</script>
+</div>
+
+<div>
+  <script >Footer.create("1.6.0", "");</script>
+</div>
+</section>
+</div> <!-- wrapper-->
+</body>
+</html>
