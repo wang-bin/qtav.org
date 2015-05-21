@@ -19,11 +19,13 @@ var Footer = {
     console.log(downloads);
     document.write(
         '<footer style="position:fixed; font-size:20px; text-align:right; bottom:20px; margin-left:-25%; height:30px; width:100%;">'
+        + '<a href="https://travis-ci.org/wang-bin/QtAV"><img src="https://travis-ci.org/wang-bin/QtAV.svg"></a>'
+        + '<a href="https://ci.appveyor.com/project/wang-bin/qtav"><img src="https://ci.appveyor.com/api/projects/status/github/wang-bin/qtav?svg=true&passingText=windows%20-%20OK"></a>'
       + '<a style="color:#a5ff00;"> QQ群:121572305 </a>'
       + '<a style="color:#a5ff00;"> IRC:#qtav </a>'
       + '<a href="https://groups.google.com/forum/#!forum/qtav"> Maillist </a>'
       + downloads
-      + '<a href="donate.html" style="color:#ffa500;">Donate</a>'
+      + '<a href="' + dir + 'donate.html" style="color:#ffa500;">Donate</a>'
       + '<div class="g-plus" data-action="share"></div></footer>'
     );
   }
