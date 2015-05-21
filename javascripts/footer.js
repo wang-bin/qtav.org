@@ -11,6 +11,7 @@ var kOS = [
 var Footer = {
   create: function(ver, dir) {
     var downloads = "";
+    downloads += "<a href='http://www.wandoujia.com/apps/org.qtav.qmlplayer'><img style='width:96px;height:32px;' src='http://static.wdjimg.com/apps/images/logo_full.png'></a>"
     kOS.forEach(function(value){
       downloads += '<a href="' + kSF +'/' + ver + '/QtAV' + ver + '-' + value.url +'/download"><img style="width:32px;height:32px;" src="'+dir + value.icon +'"></a>';
     });
@@ -22,7 +23,7 @@ var Footer = {
       + '<a style="color:#a5ff00;"> IRC:#qtav </a>'
       + '<a href="https://groups.google.com/forum/#!forum/qtav"> Maillist </a>'
       + downloads
-      + '<a href="#donate" style="color:#ffa500;">Donate</a>'
+      + '<a href="donate.html" style="color:#ffa500;">Donate</a>'
       + '<div class="g-plus" data-action="share"></div></footer>'
     );
   }
