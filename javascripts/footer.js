@@ -10,6 +10,19 @@ var kOS = [
 
 var Footer = {
   create: function(ver, dir) {
+    document.write(
+        '<footer style="position:fixed; font-size:16px; text-align:right; bottom:20px; margin-left:-25%; height:30px; width:100%;">'
+        + '<a href="https://travis-ci.org/wang-bin/QtAV"><img src="https://travis-ci.org/wang-bin/QtAV.svg"></a>'
+        + '<a href="https://ci.appveyor.com/project/wang-bin/qtav"><img src="https://ci.appveyor.com/api/projects/status/github/wang-bin/qtav?svg=true&passingText=windows%20-%20OK"></a>'
+      + '&nbsp;<a style="color:#0066FF;"><i class="fa fa-qq"></i>群:121572305</a>'
+      + '&nbsp;<a style="color:#a5ff00;">IRC:#qtav</a>'
+      + '&nbsp;<a href="https://groups.google.com/forum/#!forum/qtav">maillist</a>'
+      + '&nbsp;<a href="' + dir + 'install.html" style="font-size:28px;color:#a5ffaa;"><i class="fa fa-cloud-download"></i></a>'
+      + '&nbsp;<a href="' + dir + 'donate.html" style="color:#ff88bb;">Donate</a>'
+      + '&nbsp;<div class="g-plus" data-action="share"></div></footer>'
+    );
+  },
+  create0: function(ver, dir) {
     var downloads = "";
     downloads += "<a href='http://www.wandoujia.com/apps/org.qtav.qmlplayer'><img style='width:96px;height:32px;' src='http://static.wdjimg.com/apps/images/logo_full.png'></a>"
     kOS.forEach(function(value){
