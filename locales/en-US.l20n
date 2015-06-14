@@ -15,8 +15,8 @@ Play, pause, speed, seek, subtitle, volume, audio channel, audio track, dynamica
 <hi_video_detail "Better experience than any other players(Windows, Linux, Mac etc) with software decoding. Test file: ">
 <hw_platforms "Hardware Decoding for Many Platforms">
 <hw_platforms_detail """
-Supports DXVA, VA-API, CUDA, VDA, Cedarv. Direct rendering(0 copy, the same thing as Lavfilters native mode) is also supported for VA-API and VDA which gives you better performance.
-QtAV's VDA decoder has better performance than any other players. Direct rendering will be support for DXVA, CUDA in the future.
+Supports DXVA, VA-API, CUDA, VDA, Cedarv. Direct rendering(0 copy, the same thing as Lavfilters native mode) is also supported which gives you better performance.
+QtAV's VDA decoder has better performance than any other players.
 """>
 <hevc_dxva "DXVA2 HEVC Hardwared Decoding">
 <hevc_dxva_detail "New Intel GPU and driver is required. Tested: Intel HD Graphics 4600, NVIDIA GT750M">
