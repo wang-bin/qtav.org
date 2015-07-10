@@ -18,6 +18,7 @@ var Footer = {
       + '&nbsp;<a style="color:#a5ff00;">IRC:#qtav</a>'
       + '&nbsp;<a href="https://groups.google.com/forum/#!forum/qtav">maillist</a>'
       + '&nbsp;<a href="' + dir + 'install.html" style="font-size:28px;color:#a5ffaa;"><i class="fa fa-cloud-download"></i></a>'
+      + '&nbsp; <a href="https://play.google.com/store/apps/details?id=org.qtav.qmlplayer"><img style="height:22px;"" src="images/Google_Play_logo.svg"></a>'
       + '&nbsp;<a href="' + dir + 'donate.html" style="color:#ff88bb;">Donate</a>'
       + '&nbsp;<div class="g-plus" data-action="share"></div></footer>'
     );
