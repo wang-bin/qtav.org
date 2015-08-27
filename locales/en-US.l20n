@@ -20,7 +20,7 @@ QtAV's VDA decoder has better performance than any other players.
 """>
 <hevc_dxva "DXVA2 HEVC Hardwared Decoding">
 <hevc_dxva_detail "New Intel GPU and driver is required. Tested: Intel HD Graphics 4600, NVIDIA GT750M">
-<cuda_win "CUDA for Windows and Linux">
+<cuda_win "CUDA for Windows and Linux. Unique support for 0-copy">
 <cuda_win_detail "Decoding with CUDA is supported since 1.3.3. It's the first player/library supports CUDA on Linux(tell me if i'm wrong)">
 <hi10p_cuda "CUDA Hi10P Hardware Decoding">
 <hi10p_cuda_detail "Some NVIDIA cards support Hi10P. Better performace than any other players. I tested GT540M and GT750M.">

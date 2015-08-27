@@ -17,7 +17,7 @@
 <hw_platforms_detail "支持 DXVA, VA-API, CUDA, VDA, Cedarv。同时支持直接渲染(零拷贝, 相当于 Lavfilters 的 native 模式)技术，性能更佳。QtAV的VDA解码器比其他播放器性能更高。">
 <hevc_dxva "DXVA2 HEVC 硬件解码">
 <hevc_dxva_detail "需要新的 Intel GPU 和驱动。已测: Intel HD Graphics 4600, NVIDIA GT750M">
-<cuda_win "CUDA 支持 Windows、Linux">
+<cuda_win "CUDA 支持 Windows、Linux. 独一无二的0拷贝支持">
 <cuda_win_detail "CUDA 自 QtAV1.3.3 开始支持. QtAV 是第一个在 Linux 上支持 CUDA 解码的音视频框架（和播放器）(若有误请指正)">
 <hi10p_cuda "CUDA Hi10P 硬解">
 <hi10p_cuda_detail "较新的 NVIDIA 显卡已经支持 10bit H.264 解码。性能超越了其他任何播放器。我测试了 GT540M、GT750M。">
