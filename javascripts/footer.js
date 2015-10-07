@@ -19,7 +19,7 @@ var Footer = {
       + '&nbsp;<a href="https://groups.google.com/forum/#!forum/qtav">maillist</a>'
       + '&nbsp;<a href="' + dir + 'install.html" style="font-size:28px;color:#a5ffaa;"><i class="fa fa-cloud-download"></i></a>'
       + '&nbsp; <a href="https://play.google.com/store/apps/details?id=org.qtav.qmlplayer"><img style="height:22px;" src="' + dir + 'images/Google_Play_logo.svg"></a>'
-      + '&nbsp;<a href="' + dir + 'donate.html" style="color:#ff88bb;">Donate</a>'
+      + '&nbsp;<a href="' + dir + 'donate.html" style="color:#ff88bb;"><span data-l10n-id="donate">Donate</span></a>'
       + '&nbsp;<div class="g-plus" data-action="share"></div></footer>'
     );
   },
@@ -39,7 +39,7 @@ var Footer = {
       + '<a style="color:#a5ff00;"> IRC:#qtav </a>'
       + '<a href="https://groups.google.com/forum/#!forum/qtav"> Maillist </a>'
       + downloads
-      + '<a href="' + dir + 'donate.html" style="color:#ffa500;">Donate</a>'
+      + '<a href="' + dir + 'donate.html" style="color:#ffa500;"><span data-l10n-id="donate">Donate</span></a>'
       + '<div class="g-plus" data-action="share"></div></footer>'
     );
   }

@@ -56,3 +56,8 @@ QtAV 的 CPU 使用率比 VLC 少大概 10%!
 <donate_devices "Sailfish, Ubuntu One, BlackBerry and Windows Phone 等设备">
 <donate_contributors "其他贡献者">
 <donate_website "网站维护">
+
+<Install "安装">
+
+<latest_build "最新 (VS2013x86xp release, VS2013x64 debug, MinGW32 release)">
+<rt_dep "运行时依赖">

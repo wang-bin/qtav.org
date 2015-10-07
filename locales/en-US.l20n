@@ -58,3 +58,8 @@ Obviously QtAV has better performance. I tested a 10bit h264 video (download her
 <donate_devices "Sailfish, Ubuntu One, BlackBerry and Windows Phone devices etc">
 <donate_contributors "Donate to contributors">
 <donate_website "Website maintenance">
+
+<Install "Install">
+
+<latest_build "Latest (Windows VS2013x86xp release, VS2013x64 debug, MinGW32 release)">
+<rt_dep "Runtime dependencies">
