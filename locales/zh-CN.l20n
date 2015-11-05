@@ -31,8 +31,8 @@ QtAV 的 CPU 使用率比 VLC 少大概 10%!
 
 <platforms "支持平台">
 <platforms_detail """
-  QtAV 可以运行于 Windows、Linux、OSX、Android、iOS(模拟器里已测正常)、MeeGo、Sailfish OS。
-  其他平台比如 WinRT、Windows Phone、BlackBerry 也会支持，但是缺少开发环境和测试设备。
+  QtAV 可以运行于 Windows桌面、Windows Phone、Linux、OSX、Android、iOS(模拟器里已测正常)、MeeGo、Sailfish OS。
+  其他平台比如 BlackBerry 也会支持，但是缺少开发环境和测试设备。
 """>
 
 <qtmm_qtav "为什么选择 QtAV 而非 QtMultimedia?">

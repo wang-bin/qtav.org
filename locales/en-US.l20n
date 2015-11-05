@@ -33,8 +33,8 @@ Obviously QtAV has better performance. I tested a 10bit h264 video (download her
 
 <platforms "Platforms">
 <platforms_detail """
-  Currently QtAV can run on Windows, Linux, Mac OSX, Android, iOS(works fine on simulator), MeeGo, Sailfish OS(since QtAV1.3.3).
-  Other platforms such as WinRT, Windows Phone, BlackBerry will also be supported if I have development environment and devices.
+  Currently QtAV can run on Windows Desktop, Windows Phone, Linux, Mac OSX, Android, iOS(works fine on simulator), MeeGo, Sailfish OS(since QtAV1.3.3).
+  Other platforms such as BlackBerry will also be supported if I have development environment and devices.
 """>
 
 <qtmm_qtav "Why Not QtMultimedia? Why QtAV?">
