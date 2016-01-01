@@ -12,20 +12,6 @@
     <script src="javascripts/footer.js"></script>
     <script src="javascripts/donors.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <script type="text/javascript">
-        if(!String.prototype.startsWith){
-        String.prototype.startsWith = function (str) {
-                return !this.indexOf(str);
-            }
-        }
-        var old = "http://wang-bin.github.io/QtAV";
-        if (location.href.startsWith(old)) {
-            var loc = location.href;
-            var suf = loc.substring(old.length, loc.length);
-            loc = "http://wang-bin.github.io/qtav.org" + suf;
-            window.location.replace(loc);
-        }
-    </script>
 <!-- https://developers.google.com/+/web/share/ -->
 <!--  <script id="gapi" type="text/javascript" src="https://apis.google.com/js/platform.js">{lang: 'zh-HK'}</script>-->
     <style type="text/css">
