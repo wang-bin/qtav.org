@@ -28,7 +28,8 @@
         if (location.href.startsWith(old)) {
             var loc = location.href;
             var suf = loc.substring(old.length, loc.length);
-            loc = "http://wang-bin.github.io/qtav.org" + suf;
+            loc = "http://qtav.org" + suf;
+            console.log(loc);
             window.location.replace(loc);
         }
     </script>
@@ -95,6 +96,8 @@ img.cropped {
   </head>
 
   <body>
+    
+   
   <script src="javascripts/header.js"></script>
 
     <div class="wrapper">
@@ -478,10 +481,16 @@ Item {
   <!--http://www.ohloh.net/p/678754/widgets/project_cocomo.js, https://www.openhub.net/p/678754/widgets/project_cocomo.js-->
   <script type="text/javascript" src="https://www.openhub.net/p/678754/widgets/project_cocomo.js"></script>
 </div>
-<div class="GL" style="width:30%" id="clustrmaps-widget"></div>
+<!--
+<div class="GL" style="width:30%" id="clustrmaps-widget">
+  <a href="http://www.clustrmaps.com/map/qtav.org" title="Visitor Map for qtav.org"><img src="//www.clustrmaps.com/map_v2.png?u=2LHt&d=0HQux5ciQTf1QIeFWTVaHqwjggpC2x4OgVxEWN6S96c" /></a>
+</div>
+
+<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?u=2LHt&d=0HQux5ciQTf1QIeFWTVaHqwjggpC2x4OgVxEWN6S96c"></script>
+
 <script type="text/javascript">var _clustrmaps = {'url' : 'http://wang-bin.github.io/QtAV', 'user' : 1135716, 'server' : '2', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2014-03-12', 'lang' : 'zh', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www2.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script><noscript><a href="http://www2.clustrmaps.com/user/116115464"><img src="http://www2.clustrmaps.com/stats/maps-no_clusters/wang-bin.github.io-QtAV-thumb.jpg" alt="Locations of visitors to this page" /></a></noscript>
 
-<!--
+
 <div id="clustrmaps-widget"></div><script type="text/javascript">var _clustrmaps = {'url' : 'http://wang-bin.github.io/qtav.org', 'user' : 1136034, 'server' : '2', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2014-03-14', 'lang' : 'en', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www2.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script><noscript><a href="http://www2.clustrmaps.com/user/ba11155a2"><img src="http://www2.clustrmaps.com/stats/maps-no_clusters/wang-bin.github.io-qtav.org-thumb.jpg" alt="Locations of visitors to this page" /></a></noscript>
 <div id="clustrmaps-widget"></div><script type="text/javascript">var _clustrmaps = {'url' : 'http://www.qtav.org', 'user' : 1150440, 'server' : '4', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2014-11-03', 'lang' : 'zh', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www4.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script><noscript><a href="http://www4.clustrmaps.com/user/d87118de8"><img src="http://www4.clustrmaps.com/stats/maps-no_clusters/www.qtav.org-thumb.jpg" alt="Locations of visitors to this page" /></a></noscript>
 <a href="http://www4.clustrmaps.com/user/d87118de8"><img src="http://www4.clustrmaps.com/stats/maps-no_clusters/www.qtav.org-thumb.jpg" alt="Locations of visitors to this page" />
@@ -499,6 +508,9 @@ document.getElementById("clustrMapsLink").href = "http://www2.clustrmaps.com";
 img = document.getElementById("clustrMapsImg");
 img.onerror = cantload;
 </script>
+<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?u=2LHt&d=0HQux5ciQTf1QIeFWTVaHqwjggpC2x4OgVxEWN6S96c"></script>
+<a href="http://www.clustrmaps.com/map/qtav.org" title="Visitor Map for qtav.org"><img src="//www.clustrmaps.com/map_v2.png?u=2LHt&d=0HQux5ciQTf1QIeFWTVaHqwjggpC2x4OgVxEWN6S96c" /></a>
+
 [url=http://www4.clustrmaps.com/user/d87118de8][img]http://www4.clustrmaps.com/stats/maps-no_clusters/www.qtav.org-thumb.jpg[/img][/url]
 -->
 
@@ -510,6 +522,6 @@ img.onerror = cantload;
 
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-
-  </body>
+    
+ </body>
 </html>
