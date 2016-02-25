@@ -15,8 +15,7 @@ Play, pause, speed, seek, subtitle, volume, audio channel, audio track, dynamica
 <hi_video_detail "Better experience than any other players(Windows, Linux, Mac etc) with software decoding. Test file: ">
 <hw_platforms "Hardware Decoding for Many Platforms">
 <hw_platforms_detail """
-Supports DXVA, VA-API, CUDA, VDA, Cedarv. Direct rendering(0 copy, the same thing as Lavfilters native mode) is also supported which gives you better performance.
-QtAV's VDA decoder has better performance than any other players.
+Supports DXVA, VA-API, CUDA, VDA, VideoToolbox(OSX+iOS), Cedarv. Direct rendering(0 copy, the same thing as Lavfilters native mode) is also supported which gives you better performance.
 """>
 <hevc_dxva "DXVA2 HEVC Hardwared Decoding">
 <hevc_dxva_detail "New Intel GPU and driver is required. Tested: Intel HD Graphics 4600, NVIDIA GT750M">
@@ -33,7 +32,7 @@ Obviously QtAV has better performance. I tested a 10bit h264 video (download her
 
 <platforms "Platforms">
 <platforms_detail """
-  Currently QtAV can run on Windows Desktop, Windows Phone, Linux, Mac OSX, Android, iOS(works fine on simulator), MeeGo, Sailfish OS(since QtAV1.3.3).
+  Currently QtAV can run on Windows Desktop, Windows Phone, Linux, Mac OSX, iOS, Android, MeeGo, Sailfish OS(since QtAV1.3.3).
   Other platforms such as BlackBerry will also be supported if I have development environment and devices.
 """>
 

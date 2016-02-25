@@ -14,7 +14,7 @@
 <hi_video "高清高帧率视频">
 <hi_video_detail "软解播放比其他任何播放器有更好的体验(Windows、linux、Mac等系统)。测试文件: ">
 <hw_platforms "多平台 GPU 硬件解码">
-<hw_platforms_detail "支持 DXVA, VA-API, CUDA, VDA, Cedarv。同时支持直接渲染(零拷贝, 相当于 Lavfilters 的 native 模式)技术，性能更佳。QtAV的VDA解码器比其他播放器性能更高。">
+<hw_platforms_detail "支持 DXVA, VA-API, CUDA, VDA, VideoToolbox(OSX+iOS), Cedarv。同时支持直接渲染(零拷贝, 相当于 Lavfilters 的 native 模式)技术，性能更佳。">
 <hevc_dxva "DXVA2 HEVC 硬件解码">
 <hevc_dxva_detail "需要新的 Intel GPU 和驱动。已测: Intel HD Graphics 4600, NVIDIA GT750M">
 <cuda_win "CUDA 支持 Windows、Linux. 独一无二的0拷贝支持">
@@ -31,7 +31,7 @@ QtAV 的 CPU 使用率比 VLC 少大概 10%!
 
 <platforms "支持平台">
 <platforms_detail """
-  QtAV 可以运行于 Windows桌面、Windows Phone、Linux、OSX、Android、iOS(模拟器里已测正常)、MeeGo、Sailfish OS。
+  QtAV 可以运行于 Windows桌面、Windows Phone、Linux、OSX、iOS、Android、MeeGo、Sailfish OS。
   其他平台比如 BlackBerry 也会支持，但是缺少开发环境和测试设备。
 """>
 
