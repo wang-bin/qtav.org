@@ -23,7 +23,7 @@ Supports DXVA, VA-API, CUDA, VDA, VideoToolbox(OSX+iOS), Cedarv. Direct renderin
 <cuda_win_detail "Decoding with CUDA is supported since 1.3.3. It's the first player/library supports CUDA on Linux(tell me if i'm wrong)">
 <hi10p_cuda "CUDA Hi10P Hardware Decoding">
 <hi10p_cuda_detail "Some NVIDIA cards support Hi10P. Better performace than any other players. I tested GT540M and GT750M.">
-<hi10p_gl "Hi10P OpenGL and OpenGL ES2 Renderering">
+<hi10p_gl "10bit Video OpenGL and OpenGL ES2 Renderering">
 <hi10p_gl_detail """
 Rendering 16-bit YUV is supported in QtAV using OpenGL and OpenGL ES2(and ANGLE). Supported formats: 9, 10, 12, 14, 16 bit planar YUV, both little/big endian.
 AFAIK, those famous player such as mpv, VLC, XBMC and mplayer can not renderering it using OpenGL ES2. They only support desktop OpenGL.

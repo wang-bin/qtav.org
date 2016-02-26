@@ -21,7 +21,7 @@
 <cuda_win_detail "CUDA 自 QtAV1.3.3 开始支持. QtAV 是第一个在 Linux 上支持 CUDA 解码的音视频框架（和播放器）(若有误请指正)">
 <hi10p_cuda "CUDA Hi10P 硬解">
 <hi10p_cuda_detail "较新的 NVIDIA 显卡已经支持 10bit H.264 解码。性能超越了其他任何播放器。我测试了 GT540M、GT750M。">
-<hi10p_gl "OpenGL、OpenGL ES2 渲染 Hi10P">
+<hi10p_gl "OpenGL、OpenGL ES2 渲染 10bit 视频">
 <hi10p_gl_detail """
 QtAV 支持 OpenGL 和 OpenGL ES2 渲染大于 8bit 的 YUV 视频。现支持 9, 10, 12, 14, 16 bit 的平面格式 YUV, 包括 little/big endian。
 据我所知, 那些知名的播放器比如 mpv、VLC、XBMC 和 mplayer 只支持用桌面的 OpenGL 渲染 16bit，而不支持 OpenGL ES2。
