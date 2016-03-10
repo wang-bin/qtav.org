@@ -47,6 +47,8 @@ QtAV 的 CPU 使用率比 VLC 少大概 10%!
 
 <easy_api "简单易用的接口">
 
+<users "用户">
+
 <donate "捐赠">
 <donate_desc """
   捐赠的资金将主要用于保证 QtAV 项目的维护及更多硬件支持。

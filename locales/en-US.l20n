@@ -48,6 +48,7 @@ Obviously QtAV has better performance. I tested a 10bit h264 video (download her
 
 <easy_api "Easy API for Developers">
 
+<users "Users">
 <donate "Donate">
 <donate_desc """
   Donations are used solely for purchasing hardware to improve and extend QtAV.
