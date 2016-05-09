@@ -17,6 +17,7 @@ var kDonators = [
   {date: "2016-02-22", name: "三", value: "50 CNY"},
   {date: "2016-03-03", name: "Nguyen", value: "20 USD"},
   {date: "2016-03-09", name: "Krys", value: "50 CNY"},
+  {date: "2016-05-08", name: "Paul Harrison", value: "50 GBP"},
 ];
 
 var DonationHistory = {
