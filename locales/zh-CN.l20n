@@ -64,5 +64,6 @@ QtAV 的 CPU 使用率比 VLC 少大概 10%!
 
 <Install "安装">
 
-<latest_build "最新 (VS2013x86xp release, VS2013x64 debug, MinGW32 release+debug)">
+<latest_build "VS2015x86最新编译">
+<latest_build_all "更多最新编译. 选择一个job从 ARTIFACTS 下载">
 <rt_dep "运行时依赖">
