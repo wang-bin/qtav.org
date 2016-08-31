@@ -1,4 +1,4 @@
-var kDonators = [
+var kDonors = [
   {date: "2014-03-07", name: "sportimization", value: "100 USD"},
   {date: "2014-05-04", name: "郭＊海", value: "100 CNY"},
   {date: "2014-05-27", name: "郭＊海", value: "100 CNY"},
@@ -19,12 +19,13 @@ var kDonators = [
   {date: "2016-03-09", name: "Krys", value: "50 CNY"},
   {date: "2016-05-08", name: "Paul Harrison", value: "50 GBP"},
   {date: "2016-06-14", name: "Verma Piyush", value: "10 USD"},
+  {date: "2016-08-30", name: "sportimization", value: "250 EUR"},
 ];
 
 var DonationHistory = {
   createTag: function() {
     var doc = "<table id='donors' class='detail'>";
-    kDonators.reverse().forEach(function(d){
+    kDonors.reverse().forEach(function(d){
       doc += "<tr><td>" + d.date + "</td><td>" + d.name + "</td><td>" + d.value + "</td></tr>";
     });
     doc += "</table>";
