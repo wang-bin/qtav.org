@@ -19,6 +19,7 @@ var kDonors = [
   {date: "2016-03-09", name: "Krys", value: "50 CNY"},
   {date: "2016-05-08", name: "Paul Harrison", value: "50 GBP"},
   {date: "2016-06-14", name: "Verma Piyush", value: "10 USD"},
+  {date: "2016-06-20", name: "Corey", value: "50 CNY"},
   {date: "2016-08-30", name: "sportimization", value: "250 EUR"},
   {date: "2016-09-05", name: "George Berthiaume", value: "10 USD"},
   {date: "2016-09-14", name: "e-Virtual Group", value: "10 USD"},
