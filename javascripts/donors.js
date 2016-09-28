@@ -24,6 +24,7 @@ var kDonors = [
   {date: "2016-09-05", name: "George Berthiaume", value: "10 USD"},
   {date: "2016-09-14", name: "e-Virtual Group", value: "10 USD"},
   {date: "2016-09-18", name: "军", value: "500 CNY"},
+  {date: "2016-09-27", name: "Jean-Pierre Beauviala", value: "50 EUR"},
 ];
 
 var DonationHistory = {
