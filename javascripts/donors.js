@@ -25,6 +25,7 @@ var kDonors = [
   {date: "2016-09-14", name: "e-Virtual Group", value: "10 USD"},
   {date: "2016-09-18", name: "军", value: "500 CNY"},
   {date: "2016-09-27", name: "Jean-Pierre Beauviala", value: "50 EUR"},
+  {date: "2016-11-16", name: "发金", value: "100 CNY"},  
 ];
 
 var DonationHistory = {
