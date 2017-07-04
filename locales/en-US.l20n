@@ -15,8 +15,10 @@ Play, pause, speed, seek, subtitle, volume, audio channel, audio track, dynamica
 <hi_video_detail "Better experience than any other players(Windows, Linux, Mac etc) with software decoding. Test file: ">
 <hw_platforms "Hardware Decoding for Many Platforms">
 <hw_platforms_detail """
-Supports DXVA, VA-API, CUDA, VDA, VideoToolbox(OSX+iOS), Cedarv. Direct rendering(0 copy, the same thing as Lavfilters native mode) is also supported which gives you better performance.
+Supports MediaCodec(Android), DXVA, VA-API, CUDA, VDA, VideoToolbox(OSX+iOS), Cedarv. Direct rendering(0 copy, the same thing as Lavfilters native mode) is also supported which gives you better performance.
 """>
+<mediacodec "Android MediaCodec Decoding + 0-copy Rendering">
+<mediacodec_detail "Implemented in pure C++, works perfectly with OpenGL ES. Brings you the best performance.">
 <hevc_dxva "DXVA2 HEVC Hardwared Decoding">
 <hevc_dxva_detail "New Intel GPU and driver is required. Tested: Intel HD Graphics 4600, NVIDIA GT750M">
 <cuda "CUDA for Windows and Linux. The fastest CUDA decoding and rendering">

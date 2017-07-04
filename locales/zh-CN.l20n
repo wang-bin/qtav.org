@@ -14,7 +14,9 @@
 <hi_video "高清高帧率视频">
 <hi_video_detail "软解播放比其他任何播放器有更好的体验(Windows、linux、Mac等系统)。测试文件: ">
 <hw_platforms "多平台 GPU 硬件解码">
-<hw_platforms_detail "支持 DXVA, VA-API, CUDA, VDA, VideoToolbox(OSX+iOS), Cedarv。同时支持直接渲染(零拷贝, 相当于 Lavfilters 的 native 模式)技术，性能更佳。">
+<hw_platforms_detail "支持 MediaCodec(Android), DXVA, VA-API, CUDA, VDA, VideoToolbox(OSX+iOS), Cedarv。同时支持直接渲染(零拷贝, 相当于 Lavfilters 的 native 模式)技术，性能更佳。">
+<mediacodec "Android MediaCodec 解码 + 零拷贝渲染">
+<mediacodec_detail "纯C++实现, 完美支持OpenGL ES. 带来最高性能">
 <hevc_dxva "DXVA2 HEVC 硬件解码">
 <hevc_dxva_detail "需要新的 Intel GPU 和驱动。已测: Intel HD Graphics 4600, NVIDIA GT750M">
 <cuda "CUDA 支持 Windows、Linux. 性能最好的CUDA解码和渲染">
