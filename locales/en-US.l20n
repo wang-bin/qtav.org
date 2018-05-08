@@ -9,6 +9,17 @@
 Play, pause, speed, seek, subtitle, volume, audio channel, audio track, dynamically renderer switching, video equalizer, custom filters for both window and video frame, network stream, video crop,
   multiple renderers, hardware decoding... With the help of FFmpeg, QtAV is able to play most media formats, without installing other codecs.
 """>
+
+<ass_sub "ASS subtitle">
+<ass_sub_detail """
+Correctly render ASS styles
+""">
+
+<multi_sub "Multiple subtitles">
+<multi_sub_detail """
+Support rendering multiple subtiltes on 1 video
+""">
+
 <rt_preview "Real Time Preview">
 <rt_preview_detail "New experience">
 <hi_video "High Resolution High Frame Rate Video">
