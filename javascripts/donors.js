@@ -25,7 +25,15 @@ var kDonors = [
   {date: "2016-09-14", name: "e-Virtual Group", value: "10 USD"},
   {date: "2016-09-18", name: "军", value: "500 CNY"},
   {date: "2016-09-27", name: "Jean-Pierre Beauviala", value: "50 EUR"},
-  {date: "2016-11-16", name: "发金", value: "100 CNY"},  
+  {date: "2016-11-16", name: "发金", value: "100 CNY"},
+  {date: "2016-12-07", name: "angelo mantellini", value: "10 USD"},
+  {date: "2017-05-16", name: "Elvis Ngassa", value: "-200 USD"},
+  {date: "2017-07-06", name: "Calin Culianu", value: "10 USD"},
+  {date: "2017-07-18", name: "sportimization UG", value: "250 EUR"},
+  {date: "2017-07-20", name: "John Douglas", value: "1000 USD"},
+  {date: "2018-07-18", name: "sportimization UG", value: "250 EUR"},
+  {date: "2018-12-06", name: "Каранкевич Антон", value: "50 USD"},
+  {date: "2019-03-14", name: "Adrien Grosjean", value: "5 EUR"},
 ];
 
 var DonationHistory = {
