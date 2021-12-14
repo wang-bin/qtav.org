@@ -36,6 +36,8 @@ var kDonors = [
   {date: "2020-10-22", name: "sportimization UG", value: "250 EUR"},
   {date: "2020-03-13", name: "Netnave Studio", value: "50 USD"},
   {date: "2020-04-06", name: "sportimization UG", value: "250 EUR"},
+  {date: "2021-06-10", name: "**坡", value: "500 CNY"},
+  {date: "2021-11-28", name: "**宇", value: "200 CNY"},
 ];
 
 var DonationHistory = {
